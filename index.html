@@ -1,35 +1,50 @@
 <html lang="en">
-
+<!-- Todo:
+    -Add read functionality
+    -Store books in local storage
+    -Fix new book button bug
+    -Change layout to cards with book covers 
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="index.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
     <title>Library</title>
 </head>
 
-<body onload="render()">
-    <div class="header">
+<body class="w3-mobile" onload="render()">
+    <header class="header">
         <h1>Library App</h1>
-    </div>
+    </header>
 
 
     <div class="content">
         <p id="bookList"> </p>
-        <!-- <table id="booksTable">
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Genre</th>
-            </tr>
-        </table> -->
+
+    </div>
+
+    <div class="w3-modal" id="bookForm">
+        <div class="w3-modal-content w3-center">
+            <p></p>
+            <div class="w3-border">
+                <p><input type="text" placeholder="Title" id="title"></p>
+                <p><input type="text" placeholder="Author" id="author"></p>
+                <p><input type="text" placeholder="Genre" id="genre"></p>
+            </div>
+            <p class="w3-btn w3-green" onclick="addBookToLibrary()">Add book</p> <span class="w3-btn w3-red"
+                onclick="showForm()">Close</span>
+        </div>
     </div>
 
 
-    <div class="footer">
-
-    </div>
+    <footer class="footer">
+        <button class="w3-btn w3-green" onclick="showForm()">New Book</button>
+        <br>
+        <br>
+    </footer>
 </body>
 
 </html>
