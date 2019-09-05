@@ -1,13 +1,13 @@
-let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy");
-let gameOfThrones = new Book("Game of Thrones", "George R.R Martin", "Fantasy");
+let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg");
+let gameOfThrones = new Book("Game of Thrones", "George R.R Martin", "Fantasy", "images/GoT.jpeg");
 
 let myLibrary = [meditations, gameOfThrones];
-let bookList = document.getElementById("bookList");
 
-function Book(title, author, genre) {
+function Book(title, author, genre, coverSource) {
     this.title = title;
     this.author = author;
     this.genre = genre;
+    this.coverSource = coverSource;
     this.readStatus = false;
     this.info = function () {
         return `${this.title} by ${this.author} - ${this.genre}`;
@@ -26,7 +26,6 @@ function addBookToLibrary() {
 }
 
 function render() {
-    
     bookList.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
         createBookCard(myLibrary[i]);
@@ -39,10 +38,9 @@ function showForm() {
     form.style.display = (form.style.display === "none") ? "block" : "none";
 }
 
-function createBookCard(Book){
-    let bookCard = document.createElement("p");
-    bookCard.className = "w3-card";
-    bookCard.innerHTML += `${Book.info()}`;
-    bookList.appendChild(bookCard);
-    document.bobdy.appendChild(bookCard);
+function createBookCard(Book) {
+    let bookCard = document.createElement("div");
+    bookCard.innerHTML += `<img src="${Book.coverSource}" class="w3-card w3-hover-opacity" > <p>${Book.info()}</p>`;
+    document.getElementById("bookList").appendChild(bookCard);
+    // document.body.appendChild(bookCard);
 }

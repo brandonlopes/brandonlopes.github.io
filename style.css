@@ -1,7 +1,7 @@
 body{
     max-width: 90%;
     font-family: Arial, Helvetica, sans-serif;
-    background: lightblue;
+    /* background: lightblue; */
     margin: auto;
 }
 
@@ -21,7 +21,10 @@ body{
 
 @media only screen and (max-width: 600px){
     .footer{
-        position: fixed;
+        /* background: blue; */
+        /* width: 100%; */
+        /* position: fixed; */
         bottom: 0;
+        text-align: right;
     }
 }
