@@ -1,5 +1,6 @@
 <html lang="en">
 <!-- Todo:
+    -Fix desktop version layout and footer
     -Add read and delete functionality
     -Store books in local storage
     -Add user uploaded images 
@@ -17,12 +18,12 @@
 
 <body onload="render()">
     <header class="header">
-        <h1>Library App</h1>
+        <h1 class="w3-wide">Library App</h1>
     </header>
+
     <br>
-    <div class="bookList" id="bookList">
-        <!-- <p id="bookList"> </p> -->
-    </div>
+
+    <p class="bookList w3-display-container" id="bookList"></p>
 
     <div class="w3-modal" id="bookForm" style="display: none;">
         <div class="w3-modal-content w3-center w3-card w3-animate-top">
@@ -38,7 +39,7 @@
 
             <div>
                 <button class="w3-button w3-green w3-margin w3-round" onclick="addBookToLibrary()">Add Book</button>
-                <button class="w3-button w3-round w3-margin w3-red w3-hover-opacity" onclick="showForm()">Close</button>
+                <button class="w3-button w3-round w3-margin w3-red w3-hover-opacity" onclick="toggle('bookForm')">Close</button>
             </div>
         </div>
     </div>

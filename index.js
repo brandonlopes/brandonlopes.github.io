@@ -29,18 +29,14 @@ function render() {
     bookList.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
         createBookCard(myLibrary[i]);
-        // bookList.innerHTML += `${myLibrary[i].info()} <br><br>`;
     }
 }
 
-function showForm() {
-    let form = document.getElementById("bookForm");
-    form.style.display = (form.style.display === "none") ? "block" : "none";
+function createBookCard(Book) {
+    bookList.innerHTML += `<img src="${Book.coverSource}" class="w3-card w3-hover-opacity" onmouseover="toggle('${Book.title}')" onmouseout="toggle('${Book.title}')"> <p id="${Book.title}" style="display: none;">${Book.info()}</p>`;
 }
 
-function createBookCard(Book) {
-    let bookCard = document.createElement("div");
-    bookCard.innerHTML += `<img src="${Book.coverSource}" class="w3-card w3-hover-opacity" > <p>${Book.info()}</p>`;
-    document.getElementById("bookList").appendChild(bookCard);
-    // document.body.appendChild(bookCard);
+function toggle(x) {
+    let element = document.getElementById(x);
+    element.style.display = (element.style.display === "none") ? "block" : "none";
 }
