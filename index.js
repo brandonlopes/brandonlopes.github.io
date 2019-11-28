@@ -13,9 +13,10 @@ function Book(title, author, genre, coverSource) {
     this.author = author;
     this.genre = genre;
     this.coverSource = coverSource;
+    if(coverSource == null) this.coverSource = "images/book.svg";
     this.readStatus = false;
     this.info = function () {
-        return `${this.title} by ${this.author} - ${this.genre}`;
+        return `${this.title} by ${this.author} \n - ${this.genre}`;
     }
 }
 

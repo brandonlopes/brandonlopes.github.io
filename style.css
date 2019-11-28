@@ -1,8 +1,16 @@
 body{
     max-width: 90%;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     /* background: lightblue; */
     margin: auto;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #24292e;
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
 }
 
 .center{
@@ -12,12 +20,11 @@ body{
 
 .header{
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #959da5;
 }
 
 .bookCard{
     float: left;
-    min-width: 25%;
     max-width: 33%;
     word-wrap: break-word;
     text-align: center;
@@ -25,13 +32,19 @@ body{
 }
 
 .bookCard img{
-    /* width: 282px; */
-    height: 397px;
+    /* height: 397px; */
+    max-height: 40vh;
     display: block;
     border: 1.5px solid black;
     padding: 1.5em;
     margin-left: auto;
     margin-right: auto;
+}
+
+.bookCard img:hover{
+    border-color: #444d56;
+    box-shadow: 0px 0px 10px #444d56;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px){
