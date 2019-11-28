@@ -3,6 +3,11 @@ let gameOfThrones = new Book("Game of Thrones", "George R.R Martin", "Fantasy", 
 
 let myLibrary = [meditations, gameOfThrones];
 
+let newBookButton = document.getElementById("newBookButton");
+newBookButton.addEventListener("click", function() {
+    toggle(document.getElementById("bookForm"));
+});
+
 function Book(title, author, genre, coverSource) {
     this.title = title;
     this.author = author;
@@ -33,10 +38,12 @@ function render() {
 }
 
 function createBookCard(Book) {
-    bookList.innerHTML += `<img src="${Book.coverSource}" class="w3-card w3-hover-opacity" onmouseover="toggle('${Book.title}')" onmouseout="toggle('${Book.title}')"> <p id="${Book.title}" style="display: none;">${Book.info()}</p>`;
+    bookList.innerHTML += `<div class="bookCard">
+    <img src="${Book.coverSource}" class="" onmouseover="toggle('${Book.title}')" onmouseout="toggle('${Book.title}')">
+     <p id="${Book.title}" class="" style="visibility: hidden;">${Book.info()}</p></div>`;
 }
 
 function toggle(x) {
     let element = document.getElementById(x);
-    element.style.display = (element.style.display === "none") ? "block" : "none";
+    element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
 }

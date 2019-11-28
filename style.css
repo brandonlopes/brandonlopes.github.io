@@ -15,11 +15,31 @@ body{
     border-bottom: 1px solid black;
 }
 
+.bookCard{
+    float: left;
+    min-width: 25%;
+    max-width: 33%;
+    word-wrap: break-word;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.bookCard img{
+    /* width: 282px; */
+    height: 397px;
+    display: block;
+    border: 1.5px solid black;
+    padding: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media only screen and (max-width: 600px){
     .footer{
+        clear: both;
         /* background: blue; */
         width: 100%;
-        position: absolute;
+        /* position: absolute; */
         height: 60px;
         bottom: 0;
         text-align: right;

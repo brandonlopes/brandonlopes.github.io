@@ -10,46 +10,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="w3.css">
+    
     <link rel="stylesheet" href="style.css">
     <title>Library</title>
 </head>
 
 <body onload="render()">
     <header class="header">
-        <h1 class="w3-wide">Library App</h1>
+        <h1 class="">Library App</h1>
     </header>
 
     <br>
 
-    <p class="bookList w3-display-container" id="bookList"></p>
+    <p class="bookList" id="bookList"></p>
 
-    <div class="w3-modal" id="bookForm" style="display: none;">
-        <div class="w3-modal-content w3-center w3-card w3-animate-top">
+    <div class="" id="bookForm" style="display: none;">
+        <div class="">
             <p></p>
-            <div class="w3-border">
-                <h2 class="w3-border-bottom">Add a book</h2>
+            <div class="">
+                <h2 class="">Add a book</h2>
                 <p><input type="text" placeholder="Title" id="title"></p>
                 <p><input type="text" placeholder="Author" id="author"></p>
                 <p><input type="text" placeholder="Genre" id="genre"></p>
                 <p><label for="read">I have read this book</label> <input type="radio" name="read"></p>
-                <p><button class="w3-button w3-round w3-blue">Submit Image</button></p>
+                <p><button class="">Submit Image</button></p>
             </div>
 
             <div>
-                <button class="w3-button w3-green w3-margin w3-round" onclick="addBookToLibrary()">Add Book</button>
-                <button class="w3-button w3-round w3-margin w3-red w3-hover-opacity" onclick="toggle('bookForm')">Close</button>
+                <button class="" onclick="addBookToLibrary()">Add Book</button>
+                <button class="" onclick="toggle('bookForm')">Close</button>
             </div>
         </div>
     </div>
 
 
     <div class="footer">
-        <button class="w3-btn w3-round w3-green" onclick="showForm()">New Book</button>
+        <button id="newBookButton">New Book</button>
         <br>
         <br>
     </div>
 </body>
-
+<script src="index.js"></script>
 </html>
