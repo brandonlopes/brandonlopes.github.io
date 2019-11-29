@@ -1,6 +1,6 @@
 <html lang="en">
 <!-- Todo:
-    -Fix desktop version layout and footer
+    -Make layout responsive
     -Add read and delete functionality
     -Store books in local storage
     -Add user uploaded images 
@@ -11,24 +11,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="github-markdown.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/booklet.svg" type="image/svg">
     <title>Library</title>
 </head>
 
-<body onload="render()" class="markdown-body">
-    <header class="header">
+<body onload="render()">
+    <header>
         <h1 class="">Library App</h1>
     </header>
-
     <br>
-
     <p class="bookList" id="bookList"></p>
 
-    <div class="" id="bookForm" style="display: none;">
-        <div class="">
+    <div id="bookForm" style="display: none;">
+        <div>
             <p></p>
-            <div class="">
+            <div>
                 <h2 class="">Add a book</h2>
                 <p><input type="text" placeholder="Title" id="title"></p>
                 <p><input type="text" placeholder="Author" id="author"></p>
@@ -38,14 +36,14 @@
             </div>
 
             <div>
-                <button class="" onclick="addBookToLibrary()">Add Book</button>
-                <button class="" onclick="toggle('bookForm')">Close</button>
+                <button onclick="addBookToLibrary()">Add Book</button>
+                <button onclick="toggle('bookForm')">Close</button>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <button id="newBookButton">New Book</button>
+        <button id="newBookButton" style="display: block;">New Book</button>
         <br>
         <br>
     </div>

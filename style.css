@@ -13,19 +13,37 @@ body{
     word-wrap: break-word;
 }
 
+header{
+    text-align: center;
+    border-bottom: 1px solid #959da5;
+}
+
 .center{
     max-width: 90%;
     margin: auto;   
 }
 
-.header{
-    text-align: center;
-    border-bottom: 1px solid #959da5;
+button{
+    background-color: #444d56;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75em;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #2d3339;
+    /* border-color: #444d56; */
+    /* box-shadow: 0px 0px 10px #444d56; */
+    cursor: pointer;
 }
 
 .bookCard{
     float: left;
-    max-width: 33%;
+    /* width: 25%; */
+    margin-left: 1.5em;
+    margin-right: 1.5em;
     word-wrap: break-word;
     text-align: center;
     text-overflow: ellipsis;
@@ -33,7 +51,7 @@ body{
 
 .bookCard img{
     /* height: 397px; */
-    max-height: 40vh;
+    height: 30vh;
     display: block;
     border: 1.5px solid black;
     padding: 1.5em;
@@ -47,14 +65,20 @@ body{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 600px){
+#bookForm{
+    clear: both;
+    border: 1.5px solid #959da5;
+    padding: 1.5em;
+}
+
+@media only screen and (min-width: 600px){
     .footer{
         clear: both;
         /* background: blue; */
-        width: 100%;
+        /* width: 100%; */
         /* position: absolute; */
         height: 60px;
         bottom: 0;
-        text-align: right;
+        /* text-align: right; */
     }
 }

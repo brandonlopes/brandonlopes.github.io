@@ -1,11 +1,13 @@
 let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg");
-let gameOfThrones = new Book("Game of Thrones", "George R.R Martin", "Fantasy", "images/GoT.jpeg");
+let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
 
-let myLibrary = [meditations, gameOfThrones];
+let myLibrary = [meditations, artOfWar];
 
 let newBookButton = document.getElementById("newBookButton");
+
 newBookButton.addEventListener("click", function() {
-    toggle(document.getElementById("bookForm"));
+    toggle("bookForm");
+    toggle("newBookButton");
 });
 
 function Book(title, author, genre, coverSource) {
@@ -13,10 +15,10 @@ function Book(title, author, genre, coverSource) {
     this.author = author;
     this.genre = genre;
     this.coverSource = coverSource;
-    if(coverSource == null) this.coverSource = "images/book.svg";
+    if (coverSource == null) this.coverSource = "images/booklet.png";
     this.readStatus = false;
     this.info = function () {
-        return `${this.title} by ${this.author} \n - ${this.genre}`;
+        return `${this.title} by ${this.author}`;
     }
 }
 
@@ -40,11 +42,12 @@ function render() {
 
 function createBookCard(Book) {
     bookList.innerHTML += `<div class="bookCard">
-    <img src="${Book.coverSource}" class="" onmouseover="toggle('${Book.title}')" onmouseout="toggle('${Book.title}')">
-     <p id="${Book.title}" class="" style="visibility: hidden;">${Book.info()}</p></div>`;
+    <img src="${Book.coverSource}" class="" onmouseover="toggle('${Book.info()}')" onmouseout="toggle('${Book.info()}')">
+     <p id="${Book.info()}" class="" style="visibility: hidden;">${Book.info()}</p></div>`;
 }
 
 function toggle(x) {
     let element = document.getElementById(x);
-    element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
+    if (element.style.visibility) element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
+    if (element.style.display) element.style.display = (element.style.display === "none") ? "block" : "none";
 }
