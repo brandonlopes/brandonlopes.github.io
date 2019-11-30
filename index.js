@@ -4,10 +4,17 @@ let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Clear
 let myLibrary = [meditations, artOfWar];
 
 let newBookButton = document.getElementById("newBookButton");
+newBookButton.addEventListener("click", function () {
+    toggleDisplay("bookForm");
+    toggleDisplay("newBookButton");
+});
 
-newBookButton.addEventListener("click", function() {
-    toggle("bookForm");
-    toggle("newBookButton");
+document.getElementById("addBookButton").addEventListener("click", function () {addBookToLibrary();});
+
+let closeButton = document.getElementById("closeButton");
+closeButton.addEventListener("click", function () {
+    toggleDisplay("bookForm");
+    toggleDisplay("newBookButton");
 });
 
 function Book(title, author, genre, coverSource) {
@@ -15,11 +22,9 @@ function Book(title, author, genre, coverSource) {
     this.author = author;
     this.genre = genre;
     this.coverSource = coverSource;
-    if (coverSource == null) this.coverSource = "images/booklet.png";
+    if (coverSource == null) this.coverSource = "images/booklet.svg";
     this.readStatus = false;
-    this.info = function () {
-        return `${this.title} by ${this.author}`;
-    }
+    this.info = `${this.title} by ${this.author}`;
 }
 
 function addBookToLibrary() {
@@ -41,13 +46,32 @@ function render() {
 }
 
 function createBookCard(Book) {
-    bookList.innerHTML += `<div class="bookCard">
-    <img src="${Book.coverSource}" class="" onmouseover="toggle('${Book.info()}')" onmouseout="toggle('${Book.info()}')">
-     <p id="${Book.info()}" class="" style="visibility: hidden;">${Book.info()}</p></div>`;
+    let bookCard = document.createElement("div");
+    bookCard.setAttribute("class", "bookCard");
+
+    let bookCover = document.createElement("img");
+    bookCover.setAttribute("src", `${Book.coverSource}`);
+    bookCover.addEventListener("mouseover", function () { toggleVisibility(`${Book.info}`); });
+    bookCover.addEventListener("mouseout", function () { toggleVisibility(`${Book.info}`); });
+
+    let bookInfo = document.createElement("p");
+    bookInfo.setAttribute("id", `${Book.info}`);
+    bookInfo.innerText = `${Book.info}`;
+    bookInfo.style.visibility = "hidden";
+
+    bookCard.appendChild(bookCover);
+    bookCard.appendChild(bookInfo);
+    document.getElementById("bookList").appendChild(bookCard);
 }
 
-function toggle(x) {
+function toggleDisplay(x) {
     let element = document.getElementById(x);
-    if (element.style.visibility) element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
     if (element.style.display) element.style.display = (element.style.display === "none") ? "block" : "none";
 }
+
+function toggleVisibility(x) {
+    let element = document.getElementById(x);
+    if (element.style.visibility) element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
+}
+
+document.body.addEventListener("load", render());

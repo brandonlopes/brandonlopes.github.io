@@ -12,40 +12,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="images/booklet.svg" type="image/svg">
+    <link rel="icon" href="images/openbook.svg" type="image/svg">
     <title>Library</title>
 </head>
 
-<body onload="render()">
+<body>
     <header>
-        <h1 class="">Library App</h1>
+        <h1>Library App</h1>
     </header>
     <br>
-    <p class="bookList" id="bookList"></p>
+    <main>
+        <div id="bookList"></div>
 
-    <div id="bookForm" style="display: none;">
-        <div>
-            <p></p>
+        <div id="bookForm" style="display: none;">
             <div>
-                <h2 class="">Add a book</h2>
+                <h1>Add a book</h1>
                 <p><input type="text" placeholder="Title" id="title"></p>
                 <p><input type="text" placeholder="Author" id="author"></p>
                 <p><input type="text" placeholder="Genre" id="genre"></p>
                 <p><label for="read">I have read this book</label> <input type="radio" name="read"></p>
                 <p><button class="">Submit Image</button></p>
-            </div>
-
-            <div>
-                <button onclick="addBookToLibrary()">Add Book</button>
-                <button onclick="toggle('bookForm')">Close</button>
+                <button id="addBookButton">Add Book</button>
+                <button id="closeButton">Close</button>
             </div>
         </div>
-    </div>
-
+    </main>
     <div class="footer">
         <button id="newBookButton" style="display: block;">New Book</button>
-        <br>
-        <br>
     </div>
 </body>
 <script src="index.js"></script>
