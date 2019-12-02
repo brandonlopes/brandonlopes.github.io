@@ -55,17 +55,13 @@ function createBookCard(Book) {
     bookCover.addEventListener("mouseover", function () { toggleVisibility(`${Book.info}`); });
     bookCover.addEventListener("mouseout", function () { toggleVisibility(`${Book.info}`); });
 
-    let bookInfoDiv = document.createElement("div");
-    bookInfoDiv.setAttribute("id", `${Book.info}`);
-
-    let bookInfoParagraph = document.createElement("p");
-    bookInfoParagraph.innerText = `${Book.info}`;
-    
-    bookInfoDiv.style.visibility = "hidden";
-    bookInfoDiv.appendChild(bookInfoParagraph);
+    let bookInfo = document.createElement("p");
+    bookInfo.setAttribute("id", `${Book.info}`);
+    bookInfo.innerText = `${Book.info}`;
+    bookInfo.style.visibility = "hidden";
 
     bookCard.appendChild(bookCover);
-    bookCard.appendChild(bookInfoDiv);
+    bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
 }
 
