@@ -1,4 +1,15 @@
-let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg");
+function Book(title, author, genre, coverSource, readStatus) {
+    this.title = title;
+    this.author = author;
+    this.genre = genre;
+    this.coverSource = coverSource;
+    if (coverSource == null) this.coverSource = "images/booklet.svg";
+    this.readStatus = "Unread";
+    if(readStatus == true) this.readStatus = "Read";
+    this.info = `${this.title} by ${this.author}`;
+}
+
+let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
 let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
 
 let myLibrary = [meditations, artOfWar];
@@ -9,23 +20,13 @@ newBookButton.addEventListener("click", function () {
     toggleDisplay("newBookButton");
 });
 
-document.getElementById("addBookButton").addEventListener("click", function () {addBookToLibrary();});
+document.getElementById("addBookButton").addEventListener("click", addBookToLibrary);
 
 let closeButton = document.getElementById("closeButton");
 closeButton.addEventListener("click", function () {
     toggleDisplay("bookForm");
     toggleDisplay("newBookButton");
 });
-
-function Book(title, author, genre, coverSource) {
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-    this.coverSource = coverSource;
-    if (coverSource == null) this.coverSource = "images/booklet.svg";
-    this.readStatus = false;
-    this.info = `${this.title} by ${this.author}`;
-}
 
 function addBookToLibrary() {
     let title = document.getElementById("title").value;
@@ -54,13 +55,17 @@ function createBookCard(Book) {
     bookCover.addEventListener("mouseover", function () { toggleVisibility(`${Book.info}`); });
     bookCover.addEventListener("mouseout", function () { toggleVisibility(`${Book.info}`); });
 
-    let bookInfo = document.createElement("p");
-    bookInfo.setAttribute("id", `${Book.info}`);
-    bookInfo.innerText = `${Book.info}`;
-    bookInfo.style.visibility = "hidden";
+    let bookInfoDiv = document.createElement("div");
+    bookInfoDiv.setAttribute("id", `${Book.info}`);
+
+    let bookInfoParagraph = document.createElement("p");
+    bookInfoParagraph.innerText = `${Book.info}`;
+    
+    bookInfoDiv.style.visibility = "hidden";
+    bookInfoDiv.appendChild(bookInfoParagraph);
 
     bookCard.appendChild(bookCover);
-    bookCard.appendChild(bookInfo);
+    bookCard.appendChild(bookInfoDiv);
     document.getElementById("bookList").appendChild(bookCard);
 }
 
@@ -74,4 +79,4 @@ function toggleVisibility(x) {
     if (element.style.visibility) element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
 }
 
-document.body.addEventListener("load", render());
+document.body.onload = render();
