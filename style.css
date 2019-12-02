@@ -1,7 +1,5 @@
 body{
-    max-width: 52%;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    /* background: lightblue; */
+    max-width: 90%;
     margin: auto;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -37,8 +35,6 @@ input[type=text]{
 
 button:hover{
     background-color: #2d3339;
-    /* border-color: #444d56; */
-    /* box-shadow: 0px 0px 10px #444d56; */
     cursor: pointer;
 }
 
@@ -49,20 +45,21 @@ button:hover{
 
 .bookCard{
     float: left;
-    /* width: 25%; */
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    width: 90%;
+    margin-left: 1em;
+    margin-right: 1em;
     word-wrap: break-word;
     text-align: center;
     text-overflow: ellipsis;
 }
 
 .bookCard img{
-    /* height: 397px; */
     max-width: 22vh;
     height: 30vh;
     display: block;
     border: 1px solid black;
+    border-color: #444d56;
+    border-radius: 5px;
     padding: 1.5em;
     margin-left: auto;
     margin-right: auto;
@@ -84,7 +81,6 @@ button:hover{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4);
 }
 
@@ -96,21 +92,21 @@ button:hover{
     background-color: white;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (min-width: 1100px){
     body{
-        max-width: 90%;
+        max-width: 52%;
     }
 
     .bookCard{
-        width: 47%;
-        margin-left: 2px;
-        margin-right: 2px;
+        width: auto;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
     }
 
-    .bookCard img{
+    /* .bookCard img{
         height: 20vh;
         padding: 0.5em;
-    }
+    } */
 
     .footer{
         clear: both;
