@@ -5,7 +5,7 @@ function Book(title, author, genre, coverSource, readStatus) {
     this.coverSource = coverSource;
     if (coverSource == null) this.coverSource = "images/booklet.svg";
     this.readStatus = "Unread";
-    if(readStatus == true) this.readStatus = "Read";
+    if (readStatus == true) this.readStatus = "Read";
     this.info = `${this.title} by ${this.author}`;
 }
 
@@ -36,7 +36,6 @@ function addBookToLibrary() {
     let book = new Book(title, author, genre);
     myLibrary.push(book);
     render();
-
 }
 
 function render() {
@@ -49,30 +48,41 @@ function render() {
 function createBookCard(Book) {
     let bookCard = document.createElement("div");
     bookCard.setAttribute("class", "bookCard");
+    // bookCard.setAttribute("id", `${Book.info}`);
 
     let bookCover = document.createElement("img");
     bookCover.setAttribute("src", `${Book.coverSource}`);
-    bookCover.addEventListener("mouseover", function () { toggleVisibility(`${Book.info}`); });
-    bookCover.addEventListener("mouseout", function () { toggleVisibility(`${Book.info}`); });
+    // bookCover.addEventListener("mouseover", function () { toggleVisibility(`${Book.info}`); });
+    // bookCover.addEventListener("mouseout", function () { toggleVisibility(`${Book.info}`); });
 
-    let bookInfo = document.createElement("p");
+    let bookInfo = document.createElement("div");
     bookInfo.setAttribute("id", `${Book.info}`);
-    bookInfo.innerText = `${Book.info}`;
-    bookInfo.style.visibility = "hidden";
+    let bookInfoText = document.createElement("p");
+    bookInfoText.innerText = `${Book.info}`;
+
+    bookInfo.appendChild(bookInfoText);
+    // bookInfo.style.visibility = "hidden";
 
     bookCard.appendChild(bookCover);
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
 }
 
-function toggleDisplay(x) {
-    let element = document.getElementById(x);
+function toggleDisplay(elementID) {
+    let element = document.getElementById(elementID);
     if (element.style.display) element.style.display = (element.style.display === "none") ? "block" : "none";
 }
 
-function toggleVisibility(x) {
-    let element = document.getElementById(x);
+function toggleVisibility(elementID) {
+    let element = document.getElementById(elementID);
     if (element.style.visibility) element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
+}
+
+function toggleClass(elementID, classID) {
+    let element = document.getElementById(elementID);
+    if (element.classList) {
+        element.classList.toggle(classID);
+    } 
 }
 
 document.body.onload = render();
