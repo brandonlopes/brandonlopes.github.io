@@ -21,7 +21,7 @@ header{
     background: linear-gradient(to right, #21292e 0%, #444d56 100%);
     color: white;
     /* text-align: center; */
-    border-bottom: 1px solid #959da5;
+    /* border-bottom: 1px solid #959da5; */
 }
 
 header h1{
@@ -58,7 +58,7 @@ button:hover{
 }
 
 .bookCard{
-    /* float: left; */
+    float: left;
     position: relative;
     /* width: 100%; */
     height: auto;
@@ -73,13 +73,10 @@ button:hover{
 .bookCard img{
     max-width: 22vh;
     height: 25vh;
-    /* display: block; */
-    border: 1px solid #444d56;
+    box-shadow: 5px 5px 10px #444d56;
+    /* border: 1px solid #444d56; */
     border-radius: 5px;
-    /* border-right: none; */
-    /* border-top-right-radius: 0;
-    border-bottom-right-radius: 0; */
-    padding: 1.5em;
+    /* padding: 1.5em; */
     /* margin-left: auto; */
     /* margin-right: auto; */
 }
