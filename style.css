@@ -82,7 +82,7 @@ label:hover{
     /* width: 100%; */
     height: auto;
     margin-left: 1em;
-    margin-right: 1em; 
+    /* margin-right: 0.5em;  */
     margin-bottom: 1em;
     word-wrap: break-word;
     /* background-color: black; */
@@ -92,7 +92,7 @@ label:hover{
 }
 
 .bookCard img{
-    max-width: 23vh;
+    max-width: 25vh;
     /* height: 35vh; */
     height: 210px;
     box-shadow: 5px 5px 10px #444d56;
