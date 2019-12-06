@@ -124,7 +124,7 @@ label:hover{
     visibility: visible;
 }
 
-.bookCard p{
+.bookCard h4{
     padding-top: 3em;
     color: white;
     text-shadow: 1px 1px black;
@@ -134,11 +134,6 @@ label:hover{
     visibility: visible;
     background-color: rgba(0,0,0,0)
 }
-
-/* .bookCard div.booklet p{
-    padding-left: 1.5em; 
-    width: 75%;
-} */
 
 .modal{
     clear: both;
@@ -194,7 +189,7 @@ label:hover{
 }
 
 #bookList{
-    margin-top: 120px;
+    margin-top: 110px;
 }
 
 .footer{

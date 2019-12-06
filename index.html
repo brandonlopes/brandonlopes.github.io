@@ -32,7 +32,7 @@
                 <p><input type="text" placeholder="Genre" id="genre"></p>
                 <input type="file" id="image_upload" name="image_upload" accept="image/*">
                 <p><label for="image_upload">Submit Cover Art</label></p>
-                <p id="coverArtPreview" style="display: none;"></p>
+                <p><img src="" id="previewImg" alt="Cover art preview..."></p>
                 <button id="addBookButton">Add Book</button>
                 <button id="closeButton">Close</button>
             </div>
@@ -44,30 +44,7 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyA-SN2wOA2Ib-o29Ti2X8bUyiulbrQdnv4",
-            authDomain: "library-app-3e02c.firebaseapp.com",
-            databaseURL: "https://library-app-3e02c.firebaseio.com",
-            projectId: "library-app-3e02c",
-            storageBucket: "library-app-3e02c.appspot.com",
-            messagingSenderId: "973255477930",
-            appId: "1:973255477930:web:89c3136c654004d6f55ed3",
-            measurementId: "G-PGGDPCHTM2"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const storageService = firebase.storage();
-        const storageRef = storageService.ref();
-        firebase.analytics();
-    </script>
-
+    <script src="app.js"></script>
 </body>
 <script src="index.js"></script>
 

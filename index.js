@@ -6,8 +6,20 @@ function Book(title, author, genre, coverSource, readStatus) {
     if (coverSource == null) this.coverSource = "images/booklet.svg";
     this.readStatus = "Unread";
     if (readStatus == true) this.readStatus = "Read";
-    this.info = `${this.title} \n by ${this.author}`;
+    this.info = `${this.title}. \n ${this.author}`;
 }
+
+document.getElementById("image_upload").addEventListener("change", function(){
+    let reader = new FileReader();
+    reader.onload = function () {
+        let previewImg = document.getElementById("previewImg");
+        previewImg.src = reader.result;
+    };
+    let imgData = reader.readAsDataURL(event.target.files[0]);
+    console.log(imgData);
+    
+})
+
 
 let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
 let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
@@ -61,10 +73,10 @@ function createBookCard(Book) {
 
     let bookInfo = document.createElement("div");
     bookInfo.setAttribute("id", `${Book.info}`);
-    if(Book.coverSource == "images/booklet.svg"){
+    if (Book.coverSource == "images/booklet.svg") {
         bookInfo.setAttribute("class", "booklet");
     }
-    let bookInfoText = document.createElement("p");
+    let bookInfoText = document.createElement("h4");
     bookInfoText.innerText = `${Book.info}`;
 
     bookInfo.appendChild(bookInfoText);
