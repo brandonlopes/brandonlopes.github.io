@@ -9,33 +9,40 @@ function Book(title, author, genre, coverSource, readStatus) {
     this.info = `${this.title}. \n ${this.author}`;
 }
 
-document.getElementById("image_upload").addEventListener("change", function(){
+let myLibrary = [];
+
+function initialBooks() {
+    let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
+    let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
+    let noCover = new Book("A Book Without a Cover", "The Author", "Fantasy");
+    myLibrary.push(meditations, artOfWar, noCover);
+}
+
+document.getElementById("image_upload").addEventListener("change", generatePreviewImg);
+
+function generatePreviewImg() {
     let reader = new FileReader();
-    reader.onload = function () {
-        let previewImg = document.getElementById("previewImg");
-        previewImg.src = reader.result;
-    };
-    let imgData = reader.readAsDataURL(event.target.files[0]);
-    console.log(imgData);
+    let file = document.getElementById("image_upload").files[0];
+    let previewImg = document.getElementById("previewImg");
     
-})
-
-
-let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
-let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
-let taoTeChing = new Book("Tao Te Ching", "Lao Tzu", "Spirituality");
-let gameOfThrones = new Book("A Song of Ice and Fire", "George R.R Martin", "Fantasy");
-
-
-let myLibrary = [meditations, artOfWar, taoTeChing, gameOfThrones];
+    reader.addEventListener("load", function () {
+        previewImg.src = reader.result;
+    });
+    if (file) reader.readAsDataURL(file);
+}
 
 let newBookButton = document.getElementById("newBookButton");
 newBookButton.addEventListener("click", function () {
     toggleDisplay("bookForm");
     toggleDisplay("newBookButton");
+    clearInputFields();
 });
 
-document.getElementById("addBookButton").addEventListener("click", addBookToLibrary);
+document.getElementById("addBookButton").addEventListener("click", function () {
+    addBookToLibrary();
+    toggleDisplay("bookForm");
+    toggleDisplay("newBookButton");
+});
 
 let closeButton = document.getElementById("closeButton");
 closeButton.addEventListener("click", function () {
@@ -48,7 +55,8 @@ function addBookToLibrary() {
     let author = document.getElementById("author").value;
     let genre = document.getElementById("genre").value;
 
-    let book = new Book(title, author, genre);
+    let book = new Book(title, author, genre, previewImg.src);
+
     myLibrary.push(book);
     render();
 }
@@ -63,13 +71,11 @@ function render() {
 function createBookCard(Book) {
     let bookCard = document.createElement("div");
     bookCard.setAttribute("class", "bookCard");
-    // bookCard.setAttribute("id", `${Book.info}`);
+
     let bookCover = document.createElement("img");
     bookCover.setAttribute("src", `${Book.coverSource}`);
     bookCover.setAttribute("alt", `${Book.info}`);
     bookCard.appendChild(bookCover);
-    // bookCover.addEventListener("mouseover", function () { toggleVisibility(`${Book.info}`); });
-    // bookCover.addEventListener("mouseout", function () { toggleVisibility(`${Book.info}`); });
 
     let bookInfo = document.createElement("div");
     bookInfo.setAttribute("id", `${Book.info}`);
@@ -80,9 +86,6 @@ function createBookCard(Book) {
     bookInfoText.innerText = `${Book.info}`;
 
     bookInfo.appendChild(bookInfoText);
-    // bookInfo.style.visibility = "hidden";
-
-
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
 }
@@ -104,4 +107,15 @@ function toggleClass(elementID, classID) {
     }
 }
 
+function clearInputFields() {
+    let inputFields = document.getElementsByTagName("input");
+    for (let i = 0; i < inputFields.length; i++) {
+        inputFields[i].value = "";
+    }
+    previewImg.src = "";
+    console.log(previewImg);
+    
+}
+
+document.body.onload = initialBooks();
 document.body.onload = render();
