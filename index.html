@@ -30,7 +30,6 @@
                 <p><input type="text" placeholder="Title" id="title"></p>
                 <p><input type="text" placeholder="Author" id="author"></p>
                 <p><input type="text" placeholder="Genre" id="genre"></p>
-                <!-- <p><label for="read">I have read this book</label> <input type="radio" name="read"></p> -->
                 <input type="file" id="image_upload" name="image_upload" accept="image/*">
                 <p><label for="image_upload">Submit Cover Art</label></p>
                 <p id="coverArtPreview" style="display: none;"></p>
@@ -64,6 +63,8 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        const storageService = firebase.storage();
+        const storageRef = storageService.ref();
         firebase.analytics();
     </script>
 

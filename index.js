@@ -6,13 +6,16 @@ function Book(title, author, genre, coverSource, readStatus) {
     if (coverSource == null) this.coverSource = "images/booklet.svg";
     this.readStatus = "Unread";
     if (readStatus == true) this.readStatus = "Read";
-    this.info = `${this.title} by ${this.author}`;
+    this.info = `${this.title} \n by ${this.author}`;
 }
 
 let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
 let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
+let taoTeChing = new Book("Tao Te Ching", "Lao Tzu", "Spirituality");
+let gameOfThrones = new Book("A Song of Ice and Fire", "George R.R Martin", "Fantasy");
 
-let myLibrary = [meditations, artOfWar];
+
+let myLibrary = [meditations, artOfWar, taoTeChing, gameOfThrones];
 
 let newBookButton = document.getElementById("newBookButton");
 newBookButton.addEventListener("click", function () {
@@ -49,21 +52,25 @@ function createBookCard(Book) {
     let bookCard = document.createElement("div");
     bookCard.setAttribute("class", "bookCard");
     // bookCard.setAttribute("id", `${Book.info}`);
-
     let bookCover = document.createElement("img");
     bookCover.setAttribute("src", `${Book.coverSource}`);
+    bookCover.setAttribute("alt", `${Book.info}`);
+    bookCard.appendChild(bookCover);
     // bookCover.addEventListener("mouseover", function () { toggleVisibility(`${Book.info}`); });
     // bookCover.addEventListener("mouseout", function () { toggleVisibility(`${Book.info}`); });
 
     let bookInfo = document.createElement("div");
     bookInfo.setAttribute("id", `${Book.info}`);
+    if(Book.coverSource == "images/booklet.svg"){
+        bookInfo.setAttribute("class", "booklet");
+    }
     let bookInfoText = document.createElement("p");
     bookInfoText.innerText = `${Book.info}`;
 
     bookInfo.appendChild(bookInfoText);
     // bookInfo.style.visibility = "hidden";
 
-    bookCard.appendChild(bookCover);
+
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
 }
@@ -82,7 +89,7 @@ function toggleClass(elementID, classID) {
     let element = document.getElementById(elementID);
     if (element.classList) {
         element.classList.toggle(classID);
-    } 
+    }
 }
 
 document.body.onload = render();
