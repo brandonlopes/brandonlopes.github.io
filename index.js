@@ -16,6 +16,10 @@ function initialBooks() {
     let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
     let noCover = new Book("A Book Without a Cover", "The Author", "Fantasy");
     myLibrary.push(meditations, artOfWar, noCover);
+    for (let i = 0; i < myLibrary.length; i++) {
+        localStorage.setItem(`library${[i]}`, JSON.stringify(myLibrary[i]));
+        
+    }
 }
 
 document.getElementById("image_upload").addEventListener("change", generatePreviewImg);
@@ -27,12 +31,15 @@ function generatePreviewImg() {
     
     reader.addEventListener("load", function () {
         previewImg.src = reader.result;
+        localStorage.setItem("image", reader.result);
     });
     if (file) reader.readAsDataURL(file);
+    return reader.result;
 }
 
 let newBookButton = document.getElementById("newBookButton");
 newBookButton.addEventListener("click", function () {
+    localStorage.setItem("image", "images/booklet.svg")
     toggleDisplay("bookForm");
     toggleDisplay("newBookButton");
     clearInputFields();
@@ -55,16 +62,21 @@ function addBookToLibrary() {
     let author = document.getElementById("author").value;
     let genre = document.getElementById("genre").value;
 
-    let book = new Book(title, author, genre, previewImg.src);
-
+    let book = new Book(title, author, genre, localStorage.getItem("image"));
+    // if(localStorage.getItem("image")) book.coverSource = localStorage.getItem("image");
+    console.log("img src: "+ book.coverSource);
+    
     myLibrary.push(book);
+    localStorage.setItem(book.title, JSON.stringify(myLibrary[3]));
     render();
 }
 
 function render() {
     bookList.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
-        createBookCard(myLibrary[i]);
+        createBookCard(JSON.parse(localStorage.getItem(`library${[i]}`)));
+        console.log(JSON.parse(localStorage.getItem(`library${[i]}`)));
+        
     }
 }
 
@@ -113,7 +125,7 @@ function clearInputFields() {
         inputFields[i].value = "";
     }
     previewImg.src = "";
-    console.log(previewImg);
+    console.log(previewImg.src);
     
 }
 
