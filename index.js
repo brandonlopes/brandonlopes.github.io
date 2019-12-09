@@ -1,13 +1,13 @@
 let myLibrary = [];
 
-var localStorageSpace = function(){
+var localStorageSpace = function () {
     var allStrings = '';
-    for(var key in window.localStorage){
-        if(window.localStorage.hasOwnProperty(key)){
+    for (var key in window.localStorage) {
+        if (window.localStorage.hasOwnProperty(key)) {
             allStrings += window.localStorage[key];
         }
     }
-    return allStrings ? 3 + ((allStrings.length*16)/(8*1024)) + ' KB' : 'Empty (0 KB)';
+    return allStrings ? 3 + ((allStrings.length * 16) / (8 * 1024)) + ' KB' : 'Empty (0 KB)';
 };
 
 console.log("Size of local storage is " + localStorageSpace());
@@ -56,6 +56,7 @@ let newBookButton = document.getElementById("newBookButton");
 newBookButton.addEventListener("click", function () {
     toggleDisplay("bookForm");
     toggleDisplay("newBookButton");
+    toggleDisplay("clearStorage");
     clearInputFields();
 });
 
@@ -111,7 +112,20 @@ function createBookCard(Book) {
     let bookInfoText = document.createElement("h4");
     bookInfoText.innerText = `${Book.info}`;
 
+    let deleteBookButton = document.createElement("img");
+    deleteBookButton.src = "images/trash.svg";
+    deleteBookButton.setAttribute("class", "icons")
+    deleteBookButton.style.right = "0px";
+
+    let readBookButton = document.createElement("img");
+    readBookButton.src = "images/openbook.svg";
+    readBookButton.setAttribute("class", "icons");
+    readBookButton.style.left = "0";
+
+
     bookInfo.appendChild(bookInfoText);
+    bookInfo.appendChild(readBookButton);
+    bookInfo.appendChild(deleteBookButton);
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
 }
@@ -141,6 +155,17 @@ function clearInputFields() {
     previewImg.src = "";
     // console.log(previewImg.src);
 
+}
+
+let clearStorageButton = document.getElementById("clearStorage");
+clearStorageButton.addEventListener("click", clearStorage);
+
+function clearStorage() {
+    localStorage.clear();
+    render();
+    toggleDisplay("clearStorage");
+
+    alert("All books have been deleted");
 }
 
 document.body.onload = initialBooks();
