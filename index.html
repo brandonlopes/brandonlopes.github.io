@@ -1,9 +1,8 @@
 <html lang="en">
 <!-- Todo:
     -Make layout responsive
+        - Fix this fucking footer
     -Add read and delete functionality
-    -Store books in local and/or firebase storage
-    -Add user uploaded images 
     -Add book card info on click!
 -->
 
@@ -23,6 +22,7 @@
     </header>
     <main>
         <div id="bookList"></div>
+        <div id="newBookButton" class="newBookCard"><img src="images/plus.svg" alt=""></div>
 
         <div id="bookForm" style="display: none;">
             <div>
@@ -39,10 +39,12 @@
                 <button id="closeButton">Close</button>
             </div>
         </div>
+
+        <div class="footer">
+            <!-- <button id="newBookButton" style="display: block;">New Book</button> -->
+        </div>
     </main>
-    <div class="footer">
-        <button id="newBookButton" style="display: block;">New Book</button>
-    </div>
+    
 
     <!-- The core Firebase JS SDK is always required and must be listed first
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>

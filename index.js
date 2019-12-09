@@ -1,3 +1,17 @@
+let myLibrary = [];
+
+var localStorageSpace = function(){
+    var allStrings = '';
+    for(var key in window.localStorage){
+        if(window.localStorage.hasOwnProperty(key)){
+            allStrings += window.localStorage[key];
+        }
+    }
+    return allStrings ? 3 + ((allStrings.length*16)/(8*1024)) + ' KB' : 'Empty (0 KB)';
+};
+
+console.log("Size of local storage is " + localStorageSpace());
+
 function Book(title, author, genre, coverSource, readStatus) {
     this.title = title;
     this.author = author;
@@ -7,20 +21,23 @@ function Book(title, author, genre, coverSource, readStatus) {
     this.readStatus = "Unread";
     if (readStatus == true) this.readStatus = "Read";
     this.info = `${this.title}. \n ${this.author}`;
-}
 
-let myLibrary = [];
+}
 
 function initialBooks() {
-    let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
-    let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
-    let noCover = new Book("A Book Without a Cover", "The Author", "Fantasy");
-    myLibrary.push(meditations, artOfWar, noCover);
-    for (let i = 0; i < myLibrary.length; i++) {
-        localStorage.setItem(`library${[i]}`, JSON.stringify(myLibrary[i]));
-        
+    if (!localStorage.length) {
+        let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
+        let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
+        let noCover = new Book("A Book Without a Cover", "Mystery Author", "Fantasy");
+        myLibrary.push(meditations, artOfWar, noCover);
+        for (let i = 0; i < myLibrary.length; i++) {
+            localStorage.setItem(`book ${i}`, JSON.stringify(myLibrary[i]));
+        }
+        console.log(`There are ${myLibrary.length} books in the library`);
     }
 }
+
+
 
 document.getElementById("image_upload").addEventListener("change", generatePreviewImg);
 
@@ -28,18 +45,15 @@ function generatePreviewImg() {
     let reader = new FileReader();
     let file = document.getElementById("image_upload").files[0];
     let previewImg = document.getElementById("previewImg");
-    
+
     reader.addEventListener("load", function () {
         previewImg.src = reader.result;
-        localStorage.setItem("image", reader.result);
     });
     if (file) reader.readAsDataURL(file);
-    return reader.result;
 }
 
 let newBookButton = document.getElementById("newBookButton");
 newBookButton.addEventListener("click", function () {
-    localStorage.setItem("image", "images/booklet.svg")
     toggleDisplay("bookForm");
     toggleDisplay("newBookButton");
     clearInputFields();
@@ -48,13 +62,11 @@ newBookButton.addEventListener("click", function () {
 document.getElementById("addBookButton").addEventListener("click", function () {
     addBookToLibrary();
     toggleDisplay("bookForm");
-    toggleDisplay("newBookButton");
 });
 
 let closeButton = document.getElementById("closeButton");
 closeButton.addEventListener("click", function () {
     toggleDisplay("bookForm");
-    toggleDisplay("newBookButton");
 });
 
 function addBookToLibrary() {
@@ -62,21 +74,23 @@ function addBookToLibrary() {
     let author = document.getElementById("author").value;
     let genre = document.getElementById("genre").value;
 
-    let book = new Book(title, author, genre, localStorage.getItem("image"));
-    // if(localStorage.getItem("image")) book.coverSource = localStorage.getItem("image");
-    console.log("img src: "+ book.coverSource);
-    
+    let book = new Book(title, author, genre);
+
+    let imageRegex = new RegExp("(.html)$")
+    if (!imageRegex.exec(previewImg.src)) book.coverSource = previewImg.src;
+
     myLibrary.push(book);
-    localStorage.setItem(book.title, JSON.stringify(myLibrary[3]));
+    let latestBook = myLibrary.length - 1;
+    localStorage.setItem(`book ${latestBook}`, JSON.stringify(myLibrary[latestBook]));
     render();
 }
 
 function render() {
     bookList.innerHTML = "";
-    for (let i = 0; i < myLibrary.length; i++) {
-        createBookCard(JSON.parse(localStorage.getItem(`library${[i]}`)));
-        console.log(JSON.parse(localStorage.getItem(`library${[i]}`)));
-        
+    for (let i = 0; i < localStorage.length; i++) {
+        createBookCard(JSON.parse(localStorage.getItem(`book ${i}`)));
+        // console.table(JSON.parse(localStorage.getItem(`book ${i}`)));
+
     }
 }
 
@@ -125,8 +139,8 @@ function clearInputFields() {
         inputFields[i].value = "";
     }
     previewImg.src = "";
-    console.log(previewImg.src);
-    
+    // console.log(previewImg.src);
+
 }
 
 document.body.onload = initialBooks();
