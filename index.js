@@ -1,17 +1,5 @@
 let myLibrary = [];
 
-var localStorageSpace = function () {
-    var allStrings = '';
-    for (var key in window.localStorage) {
-        if (window.localStorage.hasOwnProperty(key)) {
-            allStrings += window.localStorage[key];
-        }
-    }
-    return allStrings ? 3 + ((allStrings.length * 16) / (8 * 1024)) + ' KB' : 'Empty (0 KB)';
-};
-
-console.log("Size of local storage is " + localStorageSpace());
-
 function Book(title, author, genre, coverSource, readStatus) {
     this.title = title;
     this.author = author;
@@ -24,51 +12,56 @@ function Book(title, author, genre, coverSource, readStatus) {
 
 }
 
-function initialBooks() {
+function initializeBooks() {
     if (!localStorage.length) {
         let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
         let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
-        let noCover = new Book("A Book Without a Cover", "Mystery Author", "Fantasy");
-        myLibrary.push(meditations, artOfWar, noCover);
-        for (let i = 0; i < myLibrary.length; i++) {
-            localStorage.setItem(`book ${i}`, JSON.stringify(myLibrary[i]));
-        }
-        console.log(`There are ${myLibrary.length} books in the library`);
+        myLibrary.push(meditations, artOfWar);
+        updateLocalStorage();
+    }
+    else {
+        myLibrary = JSON.parse(localStorage.getItem("The Library"));
     }
 }
 
+function createEventListeners() {
+    document.getElementById("image_upload").addEventListener("change", generatePreviewImg);
 
+    function generatePreviewImg() {
+        let reader = new FileReader();
+        let file = document.getElementById("image_upload").files[0];
+        let previewImg = document.getElementById("previewImg");
 
-document.getElementById("image_upload").addEventListener("change", generatePreviewImg);
+        reader.addEventListener("load", function () {
+            previewImg.src = reader.result;
+        });
+        if (file) reader.readAsDataURL(file);
+    }
 
-function generatePreviewImg() {
-    let reader = new FileReader();
-    let file = document.getElementById("image_upload").files[0];
-    let previewImg = document.getElementById("previewImg");
-
-    reader.addEventListener("load", function () {
-        previewImg.src = reader.result;
+    let newBookButton = document.getElementById("newBookButton");
+    newBookButton.addEventListener("click", function () {
+        toggleDisplay("bookForm");
+        toggleDisplay("newBookButton");
+        // toggleDisplay("clearStorage");
+        clearInputFields();
     });
-    if (file) reader.readAsDataURL(file);
+
+    document.getElementById("addBookButton").addEventListener("click", function () {
+        addBookToLibrary();
+        toggleDisplay("bookForm");
+
+    });
+
+    let closeButton = document.getElementById("closeButton");
+    closeButton.addEventListener("click", function () {
+        toggleDisplay("bookForm");
+        // toggleDisplay("clearStorage")
+    });
 }
 
-let newBookButton = document.getElementById("newBookButton");
-newBookButton.addEventListener("click", function () {
-    toggleDisplay("bookForm");
-    toggleDisplay("newBookButton");
-    toggleDisplay("clearStorage");
-    clearInputFields();
-});
-
-document.getElementById("addBookButton").addEventListener("click", function () {
-    addBookToLibrary();
-    toggleDisplay("bookForm");
-});
-
-let closeButton = document.getElementById("closeButton");
-closeButton.addEventListener("click", function () {
-    toggleDisplay("bookForm");
-});
+function updateLocalStorage(){
+    localStorage.setItem("The Library", JSON.stringify(myLibrary));
+}
 
 function addBookToLibrary() {
     let title = document.getElementById("title").value;
@@ -81,17 +74,14 @@ function addBookToLibrary() {
     if (!imageRegex.exec(previewImg.src)) book.coverSource = previewImg.src;
 
     myLibrary.push(book);
-    let latestBook = myLibrary.length - 1;
-    localStorage.setItem(`book ${latestBook}`, JSON.stringify(myLibrary[latestBook]));
+    updateLocalStorage();
     render();
 }
 
 function render() {
     bookList.innerHTML = "";
-    for (let i = 0; i < localStorage.length; i++) {
-        createBookCard(JSON.parse(localStorage.getItem(`book ${i}`)));
-        // console.table(JSON.parse(localStorage.getItem(`book ${i}`)));
-
+    for (let i = 0; i < myLibrary.length; i++) {
+        createBookCard(myLibrary[i])
     }
 }
 
@@ -113,9 +103,13 @@ function createBookCard(Book) {
     bookInfoText.innerText = `${Book.info}`;
 
     let deleteBookButton = document.createElement("img");
-    deleteBookButton.src = "images/trash.svg";
+    deleteBookButton.src = "images/delete.svg";
     deleteBookButton.setAttribute("class", "icons")
     deleteBookButton.style.right = "0px";
+
+    deleteBookButton.addEventListener("click", function () {
+        deleteBook(Book);
+    });
 
     let readBookButton = document.createElement("img");
     readBookButton.src = "images/openbook.svg";
@@ -128,6 +122,12 @@ function createBookCard(Book) {
     bookInfo.appendChild(deleteBookButton);
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
+}
+
+function deleteBook(Book) {
+    myLibrary.splice(myLibrary.indexOf(Book), 1);
+    updateLocalStorage();
+    render();
 }
 
 function toggleDisplay(elementID) {
@@ -153,8 +153,6 @@ function clearInputFields() {
         inputFields[i].value = "";
     }
     previewImg.src = "";
-    // console.log(previewImg.src);
-
 }
 
 let clearStorageButton = document.getElementById("clearStorage");
@@ -168,5 +166,13 @@ function clearStorage() {
     alert("All books have been deleted");
 }
 
-document.body.onload = initialBooks();
-document.body.onload = render();
+let body = document.getElementsByTagName("body")[0];
+body.addEventListener("load", function(){
+    createEventListeners();
+    initializeBooks();
+    render();
+});
+
+// document.body.onload = createEventListeners();
+// document.body.onload = initialBooks();
+// document.body.onload = render();
