@@ -53,15 +53,17 @@ footer{
     clear: both;
     background: linear-gradient(to right, #21292e 0%, #244d56 100%);
     width: 100%;
+    text-align: right;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0; 
     height: 60px;
 } 
 
 footer img{
-    height: 50px;
+    max-height: 40px;
     padding: 0.5em;
+    /* float: right; */
     position: fixed;
     right: 0;
 }
@@ -199,12 +201,12 @@ label:hover{
     border-radius: 5px;
     padding-left: 3.2em;
     padding-right: 3.2em;
-    padding-top: 5em;
+    padding-top: 4.5em;
     padding-bottom: 5em;
     height: 50px;
 }
 
-.newBookCard:hover img{
+.newBookCard img:hover{
     box-shadow: 1px 1px 2px 1px #444d56;
     cursor: pointer;
 }
