@@ -22,6 +22,12 @@ Table of Contents
 1 Global Styles
 -------------
 */
+
+:root{
+    --header-color: linear-gradient(to right, #21292e 0%, #244d56 100%); 
+    --text-border: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 body{
     margin: auto;
     -ms-text-size-adjust: 100%;
@@ -41,12 +47,26 @@ header{
     top: 0;
     width: 100%;
     height: auto;
-    background: linear-gradient(to right, #21292e 0%, #244d56 100%);
+    background: var(--header-color);
     color: white;
 }
 
 header h1{
+    float: left;
     padding-left: 1em;
+}
+
+header img{
+    float: right;
+    max-height: 40px;
+    /* margin: 0.5em; */
+    margin-right: 0.5em;
+    margin-top: 2em;
+}
+
+header img:hover{
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 footer{
@@ -54,18 +74,13 @@ footer{
     background: linear-gradient(to right, #21292e 0%, #244d56 100%);
     width: 100%;
     text-align: right;
-    position: fixed;
-    bottom: 0;
-    left: 0; 
+    position: relative;
     height: 60px;
 } 
 
-footer img{
-    max-height: 40px;
-    padding: 0.5em;
-    /* float: right; */
-    position: fixed;
-    right: 0;
+main{
+    height: 76vh;
+    width: 100%;
 }
 
 /* 
@@ -136,15 +151,14 @@ label:hover{
 }
 
 .bookCard img{
-    max-width: 40vw;
+    max-width: 160px;
     height: 210px;
-    box-shadow: 5px 5px 10px #444d56;
+    box-shadow: 10px 10px 10px #444d56;
     border-radius: 5px;
 }
 
 .bookCard:hover{
     border-color: #444d56;
-    box-shadow: 0px 0px 10px #444d56;
     cursor: pointer;
 }
 
@@ -162,18 +176,15 @@ label:hover{
     float: none;
 }
 
-.bookCard:hover div{
-    visibility: visible;
-}
-
 .bookCard h4{
     padding-top: 3em;
     color: white;
     padding-right: 0.5em;
-    text-shadow: 1px 1px black;
+    /* text-shadow: 1px 1px black; */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.bookCard:hover .icons{
+.bookCard:hover .icons, .bookCard:hover div{
     visibility: visible;
     box-shadow: none;
 }
@@ -290,7 +301,15 @@ label:hover{
 
 /* 4.3 bookList */
 #bookList{
-    margin-top: 110px;
+    clear: both;
+    margin-top: 100px;
+}
+
+#bookList h2{
+    /* box-shadow: 5px 5px 10px #444d56;  */
+    margin-left: 1em;
+    margin-bottom: 0.25em;
+    color: #21292e;
 }
 
 /* 
@@ -302,6 +321,10 @@ label:hover{
     
     header{
         width: 100%;
+    }
+
+    main{
+        height: 79.7vh;
     }
 
     .bookCard{

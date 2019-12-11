@@ -13,15 +13,13 @@ function Book(title, author, genre, coverSource, readStatus) {
 }
 
 function initializeBooks() {
-    if (!localStorage.length) {
+    if (localStorage.getItem("blowed up")) return;
+
+    if (!localStorage.getItem("The Library")) {
         let meditations = new Book("Meditations", "Marcus Aurelius", "Philosophy", "images/marcusaurelius.jpeg", true);
         let artOfWar = new Book("The Art of War", "Sun Tzu", "Translated by Thomas Cleary", "images/artofwar.jpeg");
         myLibrary.push(meditations, artOfWar);
-        updateLocalStorage();
-    }
-    else {
-        myLibrary = JSON.parse(localStorage.getItem("The Library"));
-    }
+    } else myLibrary = JSON.parse(localStorage.getItem("The Library"));
 }
 
 function createEventListeners() {
@@ -42,26 +40,30 @@ function createEventListeners() {
     newBookButton.addEventListener("click", function () {
         toggleDisplay("bookForm");
         toggleDisplay("newBookButton");
-        // toggleDisplay("clearStorage");
+        toggleClearStorageButton();
         clearInputFields();
     });
 
     document.getElementById("addBookButton").addEventListener("click", function () {
         addBookToLibrary();
+        toggleClearStorageButton();
         toggleDisplay("bookForm");
-
+        toggleDisplay("clearStorage")
     });
 
     let closeButton = document.getElementById("closeButton");
     closeButton.addEventListener("click", function () {
         toggleDisplay("bookForm");
-        // toggleDisplay("clearStorage")
+        toggleClearStorageButton();
     });
 }
 
-function updateLocalStorage(){
+function updateLocalStorage() {
     localStorage.setItem("The Library", JSON.stringify(myLibrary));
+    localStorage.removeItem("blowed up");
 }
+
+
 
 function addBookToLibrary() {
     let title = document.getElementById("title").value;
@@ -81,11 +83,11 @@ function addBookToLibrary() {
 function render() {
     bookList.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
-        createBookCard(myLibrary[i])
+        createBookCard(myLibrary[i], "bookList")
     }
 }
 
-function createBookCard(Book) {
+function createBookCard(Book, container) {
     let bookCard = document.createElement("div");
     bookCard.setAttribute("class", "bookCard");
 
@@ -121,7 +123,7 @@ function createBookCard(Book) {
     bookInfo.appendChild(readBookButton);
     bookInfo.appendChild(deleteBookButton);
     bookCard.appendChild(bookInfo);
-    document.getElementById("bookList").appendChild(bookCard);
+    document.getElementById(container).appendChild(bookCard);
 }
 
 function deleteBook(Book) {
@@ -138,6 +140,11 @@ function toggleDisplay(elementID) {
 function toggleVisibility(elementID) {
     let element = document.getElementById(elementID);
     if (element.style.visibility) element.style.visibility = (element.style.visibility === "hidden") ? "visible" : "hidden";
+}
+
+function toggleClearStorageButton() {
+    if (localStorage.getItem("blowed up") || myLibrary.length === 0) document.getElementById("clearStorage").style.display = "none";
+    else document.getElementById("clearStorage").style.display = "block";
 }
 
 function toggleClass(elementID, classID) {
@@ -159,20 +166,23 @@ let clearStorageButton = document.getElementById("clearStorage");
 clearStorageButton.addEventListener("click", clearStorage);
 
 function clearStorage() {
-    localStorage.clear();
-    render();
-    toggleDisplay("clearStorage");
-
-    alert("All books have been deleted");
+    let answer = prompt(`You are about to blow up the library.\n\nType "blow it up" to continue`);
+    if (answer === "blow it up") {
+        // brandonLibrary = [];
+        myLibrary = [];
+        localStorage.removeItem("The Library");
+        localStorage.setItem("blowed up", "true");
+        render();
+        toggleDisplay("clearStorage");
+    }
 }
 
-let body = document.getElementsByTagName("body")[0];
-body.addEventListener("load", function(){
-    createEventListeners();
-    initializeBooks();
-    render();
-});
+// document.body.addEventListener("load", function(){
+//     createEventListeners();
+//     initializeBooks();
+//     render();
+// });
 
-// document.body.onload = createEventListeners();
-// document.body.onload = initialBooks();
-// document.body.onload = render();
+document.body.onload = createEventListeners();
+document.body.onload = initializeBooks();
+document.body.onload = render();

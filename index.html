@@ -5,12 +5,14 @@
     -Add read functionality
     -Add book card info on click!
     -Fix your javascript
+    -Stick to the todo and minimize code. You got this!
 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/openbook.svg" type="image/svg">
     <title>Library</title>
@@ -19,6 +21,8 @@
 <body>
     <header>
         <h1>Library App</h1>
+        <img id="clearStorage" style="display: none;" src="images/trash2.svg" alt="">
+
     </header>
     <main>
         <div id="bookList"></div>
@@ -40,17 +44,15 @@
             </div>
         </div>
 
-        <footer>
-        <div id="clearStorage" style="display: block;"><img src="images/trash.svg" alt=""></div>
+        
+    </main>
+    <footer>
 
         </footer>
-    </main>
-    
 
     <!-- The core Firebase JS SDK is always required and must be listed first
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="app.js"></script> -->
 </body>
-<script src="index.js"></script>
 
 </html>
