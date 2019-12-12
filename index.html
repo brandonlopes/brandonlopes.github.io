@@ -1,8 +1,6 @@
 <html lang="en">
 <!-- Todo:
-    -Make layout responsive
-        - Fix this fucking footer
-    -Add read functionality
+    - Figure out why this bomb keeps disappearing
     -Add book card info on click!
     -Fix your javascript
     -Stick to the todo and minimize code. You got this!
@@ -21,7 +19,7 @@
 <body>
     <header>
         <h1>Library App</h1>
-        <img id="clearStorage" style="display: none;" src="images/trash2.svg" alt="">
+        <img id="clearStorage" style="display: block;" src="images/trash2.svg" alt="">
 
     </header>
     <main>
@@ -31,9 +29,10 @@
         <div id="bookForm" style="display: none;">
             <div>
                 <h1>Add a book</h1>
-                <p><input type="text" placeholder="Title" id="title"></p>
-                <p><input type="text" placeholder="Author" id="author"></p>
-                <p><input type="text" placeholder="Genre" id="genre"></p>
+                <h4 id="formError"></h4>
+                <p><input type="text" placeholder="Title" id="title" name="title" required pattern="([A-Z]||[a-z])\w+"></p>
+                <p><input type="text" placeholder="Author" id="author" name="author" required pattern="([A-Z]||[a-z])\w+"></p>
+                <p><input type="text" placeholder="Genre" id="genre" name="genre" pattern="([A-Z]||[a-z])\w+"></p>
 
                 <input type="file" id="image_upload" name="image_upload" accept="image/*">
                 <p><label for="image_upload">Submit Cover Art</label></p>

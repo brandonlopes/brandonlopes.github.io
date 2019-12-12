@@ -16,6 +16,7 @@ Table of Contents
     4.1 bookForm
     4.2 previewImg
     4.3 bookList
+    4.4 formError
 5 Media Queries
 
 -------------
@@ -115,6 +116,13 @@ input[type=text]{
 
 input[type=file]{
     display: none;
+}
+
+input[type=submit]{
+    background-color: #444d56;
+    color: white;
+    padding: 0.75em;
+    width: 40px;
 }
 
 /* 2.3 labels */
@@ -310,6 +318,11 @@ label:hover{
     margin-left: 1em;
     margin-bottom: 0.25em;
     color: #21292e;
+}
+
+/* 4.4 formError */
+#formError{
+    color: #ff5555;
 }
 
 /* 
