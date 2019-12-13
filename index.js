@@ -5,7 +5,7 @@ function Book(title, author, genre, coverSource, contentSource) {
     this.title = title;
     this.author = author;
     this.genre = genre;
-    if (!customImageExists()) {
+    if (!customImageExists() && this.coverSource === null) {
         this.coverSource = "images/booklet.svg";
     } else {
         this.coverSource = coverSource;
@@ -56,8 +56,6 @@ function initializeEventListeners() {
                 previewImg.src = reader.result;
             });
             reader.readAsDataURL(file); 
-        } else {
-            previewImg.src = "images/booklet.svg";
         }
     });
 
