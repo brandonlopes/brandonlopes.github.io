@@ -1,15 +1,12 @@
 
 let myLibrary = [];
+let defaultCover = "images/booklet.svg"
 
 function Book(title, author, genre, coverSource, contentSource) {
     this.title = title;
     this.author = author;
     this.genre = genre;
-    if (!customImageExists() || this.coverSource === null) {
-        this.coverSource = "images/booklet.svg";
-    } else {
-        this.coverSource = coverSource;
-    }
+    this.coverSource = coverSource;
     this.contentSource = contentSource;
     this.info = `${this.title} by ${this.author}`;
 }
@@ -99,13 +96,15 @@ function render() {
     for (i = 0; i < myLibrary.length; i++) {
         createBookCard(myLibrary[i]);
     }
+    console.log(previewImg.src);
+    
 }
 
 function createCustomBook() {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let genre = document.getElementById("genre").value;
-    let book = new Book(title, author, genre, null, null);
+    let book = new Book(title, author, genre, defaultCover, null);
 
     if (customImageExists()) {
         book.coverSource = previewImg.src;
@@ -122,7 +121,8 @@ function createCustomBook() {
 function customImageExists() {    
     let imageRegex = new RegExp("(.html)$");
     let githubRegex = new RegExp("(./$)");
-    if (!imageRegex.exec(previewImg.src) && !githubRegex.exec(previewImg.src)) { return true; }
+    let nullRegex = new RegExp("(./null$)");
+    if (!imageRegex.exec(previewImg.src) && !githubRegex.exec(previewImg.src) && !nullRegex.exec(previewImg.src)) { return true; }
 }
 
 function addBookToLibrary(book) {
@@ -191,7 +191,6 @@ function clearInputFields() {
     for (i = 0; i < inputFields.length; i++) {
         inputFields[i].value = "";
     }
-    previewImg.src = "";
 }
 
 function toggleDisplay(elementID) {
