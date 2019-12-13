@@ -5,7 +5,7 @@ function Book(title, author, genre, coverSource, contentSource) {
     this.title = title;
     this.author = author;
     this.genre = genre;
-    if (!customImageExists() && this.coverSource === null) {
+    if (!customImageExists() || this.coverSource === null) {
         this.coverSource = "images/booklet.svg";
     } else {
         this.coverSource = coverSource;
@@ -121,7 +121,7 @@ function createCustomBook() {
 
 function customImageExists() {    
     let imageRegex = new RegExp("(.html)$");
-    let githubRegex = new RegExp("(.io/$)");
+    let githubRegex = new RegExp("(./$)");
     if (!imageRegex.exec(previewImg.src) && !githubRegex.exec(previewImg.src)) { return true; }
 }
 
