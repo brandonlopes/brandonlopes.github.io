@@ -161,6 +161,7 @@ function createBookCard(Book) {
         render();
     });
 
+    if(Book.contentSource) {
     let bookLink = document.createElement("a");
     bookLink.setAttribute("href", Book.contentSource);
     let readBookButton = document.createElement("img");
@@ -168,10 +169,10 @@ function createBookCard(Book) {
     readBookButton.setAttribute("class", "icons");
     readBookButton.style.left = "0";
     bookLink.appendChild(readBookButton);
-
+    bookInfo.appendChild(bookLink);
+    }
 
     bookInfo.appendChild(bookInfoText);
-    bookInfo.appendChild(bookLink);
     bookInfo.appendChild(deleteBookButton);
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
