@@ -5,7 +5,7 @@ function Book(title, author, genre, coverSource, contentSource) {
     this.title = title;
     this.author = author;
     this.genre = genre;
-    if (coverSource === null) {
+    if (!customImageExists()) {
         this.coverSource = "images/booklet.svg";
     } else {
         this.coverSource = coverSource;
@@ -49,13 +49,16 @@ function initializeBooks() {
 function initializeEventListeners() {
     document.getElementById("image_upload").addEventListener("change", function () {
         const reader = new FileReader();
-        const file = document.getElementById("image_upload").files[0];
-        const previewImg = document.getElementById("previewImg");
-
-        reader.addEventListener("load", function () {
-            previewImg.src = reader.result;
-        });
-        if (file) { reader.readAsDataURL(file); }
+        const file = document.getElementById("image_upload").files[0]; 
+        let previewImg = document.getElementById("previewImg")
+        if (file) { 
+            reader.addEventListener("load", function () {
+                previewImg.src = reader.result;
+            });
+            reader.readAsDataURL(file); 
+        } else {
+            previewImg.src = "images/booklet.svg";
+        }
     });
 
     document.getElementById("newBookButton").addEventListener("click", function () {
@@ -118,9 +121,10 @@ function createCustomBook() {
     }
 }
 
-function customImageExists() {
+function customImageExists() {    
     let imageRegex = new RegExp("(.html)$");
-    if (!imageRegex.exec(previewImg.src)) { return true; }
+    let githubRegex = new RegExp("(.io/$)");
+    if (!imageRegex.exec(previewImg.src) && !githubRegex.exec(previewImg.src)) { return true; }
 }
 
 function addBookToLibrary(book) {
