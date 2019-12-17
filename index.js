@@ -8,7 +8,7 @@ function Book(title, author, genre, coverSource, contentSource) {
     this.genre = genre;
     this.coverSource = coverSource;
     this.contentSource = contentSource;
-    this.info = `${this.title} by ${this.author}`;
+    this.info = `${this.title} \n ${this.author}`;
 }
 
 function setDefaultBooks() {
@@ -54,6 +54,10 @@ function initializeEventListeners() {
             });
             reader.readAsDataURL(file); 
         }
+    });
+
+    document.getElementById("clearPreview").addEventListener("click", function(){
+        previewImg.src = "";
     });
 
     document.getElementById("newBookButton").addEventListener("click", function () {
@@ -169,12 +173,14 @@ function createBookCard(Book) {
     let readBookButton = document.createElement("img");
     readBookButton.src = "images/openbook.svg";
     readBookButton.setAttribute("class", "icons");
-    readBookButton.style.left = "0";
+    readBookButton.style.right = "0";
+    readBookButton.style.marginRight = "40%";
     bookLink.appendChild(readBookButton);
     bookInfo.appendChild(bookLink);
     }
 
-    bookInfo.appendChild(bookInfoText);
+    // bookInfo.appendChild(bookCover);
+    bookCard.appendChild(bookInfoText);
     bookInfo.appendChild(deleteBookButton);
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
