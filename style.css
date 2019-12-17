@@ -148,7 +148,6 @@ label:hover{
 
 /* 3.1 bookCard */
 .bookCard{
-    /* background: green; */
     float: left;
     position: relative;
     height: auto;
@@ -157,14 +156,13 @@ label:hover{
     margin-right: 2.5%; 
     margin-bottom: 1em;
     word-wrap: break-word;
-    box-shadow: 5px 5px 10px #444d56;
+    box-shadow: 7px 7px 10px #444d56;
     border-radius: 5px;
 }
 
 .bookCard img{
     float: left;
     max-width: 50%;
-    /* height: 210px; */
     height: 210px;
     border-radius: 5px;
 }
@@ -175,8 +173,6 @@ label:hover{
 }
 
 .bookCard div{
-    /* clear: both; */
-    /* visibility: hidden; */
     position: absolute;
     height: 100%;
     width: 100%;
@@ -185,21 +181,14 @@ label:hover{
     border-radius: 5px;
     word-wrap: break-word;
     text-align: right;
-    /* background-color: rgba(0,0,0,0.7); */
     background: var(--header-color);
-    /* float: right; */
 }
 
 .bookCard h4{
-    /* float: right; */
     padding: 1em;
     margin-left: 48%;
     border-radius: 5px;
     color: white;
-    /* border: 1px solid black; */
-    /* padding-right: 0.5em; */
-    /* text-shadow: 1px 1px black; */
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .bookCard:hover .icons, .bookCard:hover div{
@@ -244,11 +233,11 @@ label:hover{
 .icons{
     opacity: 0.5;
     position: absolute;
-    z-index: 2;
     bottom: 0;
     visibility: hidden;
     max-height: 20%;
     padding-left: 0.2em;
+    padding-right: 0.4em;
 }
 
 .icons:hover{
@@ -341,6 +330,12 @@ label:hover{
 5 Media Queries
 -------------
 */
+@media only screen and (min-width: 550px){
+    .bookCard{
+        width: 45%;
+    }
+}
+
 @media only screen and (min-width: 1050px){
     
     header{
@@ -352,7 +347,7 @@ label:hover{
     }
 
     .bookCard{
-        width: 25%;
+        width: 22%;
     }
 
     .bookCard img{

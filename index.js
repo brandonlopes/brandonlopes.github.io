@@ -99,9 +99,7 @@ function render() {
     let i;
     for (i = 0; i < myLibrary.length; i++) {
         createBookCard(myLibrary[i]);
-    }
-    console.log(previewImg.src);
-    
+    }    
 }
 
 function createCustomBook() {
@@ -159,7 +157,7 @@ function createBookCard(Book) {
     let deleteBookButton = document.createElement("img");
     deleteBookButton.src = "images/delete.svg";
     deleteBookButton.setAttribute("class", "icons");
-    deleteBookButton.style.right = "0px";
+    deleteBookButton.style.left = "0px";
 
     deleteBookButton.addEventListener("click", function () {
         deleteBook(Book);
@@ -174,14 +172,13 @@ function createBookCard(Book) {
     readBookButton.src = "images/openbook.svg";
     readBookButton.setAttribute("class", "icons");
     readBookButton.style.right = "0";
-    readBookButton.style.marginRight = "40%";
     bookLink.appendChild(readBookButton);
-    bookInfo.appendChild(bookLink);
+    bookCard.appendChild(bookLink);
     }
 
-    // bookInfo.appendChild(bookCover);
+    // bookCard.appendChild(bookCover);
     bookCard.appendChild(bookInfoText);
-    bookInfo.appendChild(deleteBookButton);
+    bookCard.appendChild(deleteBookButton);
     bookCard.appendChild(bookInfo);
     document.getElementById("bookList").appendChild(bookCard);
 }

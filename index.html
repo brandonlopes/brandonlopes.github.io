@@ -1,5 +1,6 @@
 <html lang="en">
 <!-- Todo:
+    - Before doing anything, is my code in a way that is modular and expandable?
     - Add book card info on click!
     - Add firebase functionality
     - Figure out PDF/HTML uploading and reading
@@ -11,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/openbook.svg" type="image/svg">
+    <link rel="shortcut icon" href="images/openbook.svg" type="image/svg">
     <title>Library</title>
 </head>
 
@@ -35,7 +36,7 @@
 
                 <input type="file" id="image_upload" name="image_upload" accept="image/*">
                 <p><label for="image_upload">Submit Cover Art</label> <button id="clearPreview">Clear</button></p>
-                <p><img src="null" id="previewImg" alt="Image Preview..."></p>
+                <p><img src="" id="previewImg" alt="Image Preview..."></p>
 
                 <button id="addBookButton">Add Book</button>
                 <button id="closeButton">Close</button>
