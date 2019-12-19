@@ -158,7 +158,7 @@ function createBookCard(Book) {
     if (Book.coverSource === "images/booklet.svg") {
         bookInfo.setAttribute("class", "booklet");
     }
-    let bookInfoText = document.createElement("h4");
+    let bookInfoText = document.createElement("p");
     bookInfoText.innerText = `${Book.info}`;
 
     let deleteBookButton = document.createElement("img");

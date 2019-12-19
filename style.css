@@ -149,8 +149,9 @@ label:hover{
 /* 3.1 bookCard */
 .bookCard{
     position: relative;
-    height: 215px;
-    width: 380px;
+    height: 180px;
+    width: 320px;
+    max-width: 90%;
     margin: auto;
     margin-bottom: 1em;
     word-wrap: break-word;
@@ -161,7 +162,8 @@ label:hover{
 .bookCard img{
     float: left;
     max-width: 40%;
-    height: 215px;
+    /* height: 215px; */
+    height: 100%;
     border-radius: 5px;
 }
 
@@ -176,17 +178,19 @@ label:hover{
     z-index: -1;
     top: 0;
     border-radius: 5px;
-    word-wrap: break-word;
     background: var(--header-color);
 }
 
-.bookCard h4{
+.bookCard p{
     float: left;
     text-align: left;
-    line-height: 2em;
-    margin-left: 1.5em;
-    max-width: 50%;
+    line-height: 1.5em;
+    margin-left: 0.5em;
+    /* margin-right: 0px;
+    padding-right: 0px; */
+    max-width: 57%;
     border-radius: 5px;
+    word-wrap: break-word;
     color: white;
 }
 
