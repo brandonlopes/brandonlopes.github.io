@@ -2,13 +2,17 @@
 let myLibrary = [];
 let defaultCover = "images/booklet.svg"
 
-function Book(title, author, genre, coverSource, contentSource) {
+function Book(title, author, genre, coverSource, pages, contentSource) {
     this.title = title;
     this.author = author;
     this.genre = genre;
     this.coverSource = coverSource;
+    this.pages = pages;
     this.contentSource = contentSource;
-    this.info = `${this.title} \n ${this.author}`;
+    this.info = `Title: ${this.title}
+    Author: ${this.author}
+    Genre: ${this.genre}
+    Pages: ${this.pages}`;
 }
 
 function setDefaultBooks() {
@@ -16,15 +20,17 @@ function setDefaultBooks() {
         "Meditations",
         "Marcus Aurelius",
         "Philosophy",
-        "images/marcusaurelius.jpeg",
+        "images/marcusaurelius2.jpg",
+        170,
         "books/Meditations - Marcus Aurelius.html"
     );
 
     let artOfWar = new Book(
         "The Art of War",
         "Sun Tzu",
-        "Translated by Thomas Cleary",
+        "Military Art",
         "images/artofwar.jpeg",
+        170,
         "books/The Art of War, by Sun Tzu.html"
     );
     myLibrary = [meditations, artOfWar];
@@ -106,12 +112,13 @@ function createCustomBook() {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let genre = document.getElementById("genre").value;
-    let book = new Book(title, author, genre, defaultCover, null);
+    let pages = document.getElementById("pages").value
+    let book = new Book(title, author, genre, defaultCover, pages);
 
     if (customImageExists()) {
         book.coverSource = previewImg.src;
     }
-    if (title && author) {
+    if (title && author && genre && pages > 0) {
         addBookToLibrary(book);
         toggleDisplay("bookForm");
     }
@@ -134,7 +141,7 @@ function addBookToLibrary(book) {
 
 function displayFormError() {
     let formError = document.getElementById("formError");
-    formError.innerText = "Books must have a title and an author";
+    formError.innerText = "Please fill out all fields properly";
 }
 
 function createBookCard(Book) {
@@ -194,6 +201,7 @@ function clearInputFields() {
     for (i = 0; i < inputFields.length; i++) {
         inputFields[i].value = "";
     }
+    previewImg.src = "";
 }
 
 function toggleDisplay(elementID) {

@@ -20,7 +20,7 @@
 <body>
     <header>
         <h1>Library App</h1>
-        <img id="clearStorage" style="display: block;" src="images/trash2.svg" alt="">
+        <img id="clearStorage" style="display: block;" src="images/bomb.svg" alt="">
 
     </header>
     <main>
@@ -31,9 +31,10 @@
             <div>
                 <h1>Add a book</h1>
                 <h4 id="formError"></h4>
-                <p><input type="text" placeholder="Title" id="title" name="title" required pattern="([A-Z]||[a-z])\w+"></p>
-                <p><input type="text" placeholder="Author" id="author" name="author" required pattern="([A-Z]||[a-z])\w+"></p>
+                <p><input type="text" placeholder="Title" id="title" name="title" pattern="([A-Z]||[a-z])\w+"></p>
+                <p><input type="text" placeholder="Author" id="author" name="author" pattern="([A-Z]||[a-z])\w+"></p>
                 <p><input type="text" placeholder="Genre" id="genre" name="genre" pattern="([A-Z]||[a-z])\w+"></p>
+                <p><input type="number" placeholder="Number of Pages" id="pages" name="pages" pattern="([0-9]+)"></p>
 
                 <input type="file" id="image_upload" name="image_upload" accept="image/*">
                 <p><label for="image_upload">Submit Cover Art</label> <button id="clearPreview">Clear</button></p>
