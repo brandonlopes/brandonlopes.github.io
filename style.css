@@ -11,8 +11,11 @@ main{
     text-align: center;
     margin: auto;
     padding-top: 70px;
-    width: 500px;
-    /* box-shadow: 2px 2px 8px #888888; */
+    width: 365px;
+}
+
+img{
+    max-width: 75%;
 }
 
 h1{
