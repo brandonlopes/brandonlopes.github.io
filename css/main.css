@@ -1,0 +1,157 @@
+:root{
+  --base-padding: 0.5em 0px 0px;
+  --base-font-size: 18px;
+  --base-width: 75%;
+  --menu-icon-display: none;
+  --mobile-menu-display: none;
+  --background-color: white;
+  --text-color: #24292e;
+}
+
+body{
+  color: var(--text-color);
+  line-height: 1.65em;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 18px;
+  word-wrap: break-word;
+  margin: 0px;
+  padding: var(--base-padding);
+  background: var(--background-color);
+}
+
+header a{
+  margin-left: 5px;
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+nav{
+  margin: 0px;
+  padding-top: 0.5em;
+  width: 100%;
+  height: 2.5em;
+  border-bottom: 1px solid lightgrey;
+}
+
+blockquote{
+  margin-left: 0px;
+  font-style: italic;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+/* Classes */
+.show{
+  display: none;
+}
+
+.site-title{
+  float: left;
+}
+
+.page-links{
+  text-align: center;
+  margin: auto;
+  width: 35%;
+}
+
+.light-switch{
+  margin-right: 0.5em;
+  float: right;
+}
+
+.light-switch label:hover{
+  cursor: pointer;
+}
+
+.menu-icon{
+  position: relative;
+  float: right;
+  padding: 0px;
+  margin: 0px;
+  display: var(--menu-icon-display);
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 5px 0;
+  transition: 0.4s;
+  display: var(--menu-icon-display);
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px) ;
+  transform: rotate(-45deg) translate(-5px, 5px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -7px) ;
+  transform: rotate(45deg) translate(-6px, -7px) ;
+}
+
+.menu-icon:hover{
+  cursor: pointer;
+}
+
+.wrapper{
+  clear: both;
+  width: var(--base-width);
+  max-width: 700px;
+  margin: auto;
+}
+
+@media all and (max-width: 800px){
+  :root{
+    --base-padding: 1em;
+    --base-width: auto;
+    --menu-icon-display: block;
+  }
+
+  nav div{
+    display: var(--mobile-menu-display);
+  }
+
+  .light-switch{
+    margin-top: 1.5em;
+    margin-right: 0px;
+    float: right;
+    clear: both;
+  }
+
+  .page-links{
+    clear: both;
+    float: right;
+    text-align: center;
+    word-spacing: 15px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 95%;
+    border: 1px solid var(--text-color);
+  }
+}
