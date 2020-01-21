@@ -1,0 +1,25 @@
+<header>
+  <nav>
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <!-- <a href="#" class="menu-icon"><img id="menu-icon" src="/assets/images/menu.svg" alt=""></a> -->
+
+    <div class="menu-icon" id="menu-icon">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div> 
+    </div>
+  
+    <label class="light-switch">
+      <input type="checkbox" id="light-switch">
+      <span class="slider"></span>
+    </label>
+    <div class="page-links">
+      <a href="/assets/documents/Brandon Lopes - Resume.pdf" download="BrandonLopes-Resume">Resume</a>
+      {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </nav>
+</header>

@@ -1,4 +1,4 @@
-document.body.onload = themeSelector().loadTheme(), mobileMenu();
+document.body.onload = themeSelector().loadTheme(), mobileMenu(), quoteOfTheDay();
 
 function themeSelector() {
     let lightSwitch = document.getElementById("light-switch");
@@ -53,21 +53,74 @@ function themeSelector() {
 function mobileMenu() {
     let menuIcon = document.getElementById("menu-icon");
     let root = document.documentElement;
-    let currentTheme = JSON.parse(localStorage.getItem("currentTheme"));
 
     menuIcon.addEventListener("click", function () {
         menuIcon.classList.toggle("change");
-        toggleMobileMenu();   
-        for (let i = 0; i < menuIcon.children; i++) {
-            menuIcon.children[i].backgroundColor = currentTheme.textColor;
-        }   
+        toggleMobileMenu();
     });
 
-    function toggleMobileMenu(){
-        if(menuIcon.classList.contains("change")) {
-            root.style.setProperty("--mobile-menu-display", "block");
+    function toggleMobileMenu() {
+        if (menuIcon.classList.contains("change")) {
+            root.style.setProperty("--nav-height", "9.5em");
+            setTimeout(function () {
+                root.style.setProperty("--mobile-menu-display", "block");
+            }, 200);
         } else {
+            root.style.setProperty("--nav-height", "2.5em");
             root.style.setProperty("--mobile-menu-display", "none");
         }
     }
+}
+
+function postSearch() {
+    let map = {
+        'category': getParam('category'),
+        'tags': getParam('tags')
+    }
+
+}
+
+function quoteOfTheDay() {
+    let date = new Date();
+
+    let quotesList = {
+        quotes: [
+            {
+                text: "Less is more. It's also less. That's the point.",
+                author: "Greg McKeown"
+            },
+            {
+                text: "All of humanity's problems stem from man's inability to sit quietly in a room alone",
+                author: "Blaise Pascal"
+            },
+            {
+                text: "Perfection is achieved when there is nothing left to take away",
+                author: "Antoine de Saint-Exupery"
+            },
+            {
+                text: "Learn to enjoy the process. Love the daily discipline of showing up everyday and having the thing itself generate its own satisfaction",
+                author: "James Clear"
+            },
+            {
+                text: "We all have two lives. The second begins when we realize we only have one.",
+                author: "Confucius"
+            },
+            {
+                text: "Waste no more time arguing about what a good man should be. Be one.",
+                author: "Marcus Aurelius"
+            },
+            {
+                text: "I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures.",
+                author: "Lao Tzu"
+            }
+        ]
+    }
+
+    let today = date.getDay();
+    let quoteOfTheDay = quotesList.quotes[today];
+
+    let quoteText = document.getElementById("quoteOfTheDay");
+    let quoteAuthor = document.getElementById("quoteAuthor");
+    quoteText.innerText = quoteOfTheDay.text;
+    quoteAuthor.innerText = `- ${quoteOfTheDay.author}`
 }
