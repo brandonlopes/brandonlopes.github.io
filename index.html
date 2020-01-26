@@ -1,29 +1,25 @@
----
-layout: default
----
-<div class="wrapper">
-  {% include quote-of-the-day.html %}
-  <h1 style="text-align: center;">Hello there! <br> {% include welcome-deer.html %} </h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nibh tellus, vehicula ut maximus sed, fringilla a
-    justo. Nunc vitae efficitur nisl. Ut sapien erat, pretium et commodo nec, rutrum bibendum magna. Sed ut massa massa.
-    Etiam euismod neque lacus, id tincidunt risus iaculis a. Aliquam porta venenatis bibendum. Nam id varius nulla. Sed
-    vitae purus ac odio ornare vestibulum vitae tempor arcu. Nunc non venenatis purus. Duis a augue at nulla congue
-    egestas. Morbi mattis felis sit amet tortor euismod, fringilla viverra est elementum. </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151885963-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  {% for post in site.posts limit:1 %}
-  <h2>Latest Post:</h2>
-  <div class="card">
-
-    <img class="thumbnail" src="{{ post.thumbnail }}" alt="" srcset="">
-    <h2>
-      <br>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-    <p>{{ post.excerpt }} <a class="post-link readMore" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
-      <!-- <span class="readMore">Read More</span> -->
-    </p>
-  </div>
-  {% endfor %}
-</div>
+  gtag('config', 'UA-151885963-1');
+</script>
+</head>
+<body>
+    <main>
+        <h1>Currently under construction </h1>
+        <img src="fireplace.gif" alt="">
+    </main>
+</body>
+</html>
