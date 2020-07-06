@@ -61,9 +61,9 @@ function mobileMenu() {
 
     function toggleMobileMenu() {
         if (menuIcon.classList.contains("change")) {
-            root.style.setProperty("--nav-height", "100%");
+            root.style.setProperty("--nav-height", "15em");
             setTimeout(function () {
-                root.style.setProperty("--mobile-menu-display", "block");
+                root.style.setProperty("--mobile-menu-display", "flex");
             }, 200);
         } else {
             root.style.setProperty("--nav-height", "2.5em");

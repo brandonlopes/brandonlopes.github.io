@@ -4,11 +4,11 @@
     <title>Brandon Lopes</title>
     <description>Technology, philosophy, and the little things
 </description>
-    <link>https://brandonlopes.ca/</link>
-    <atom:link href="https://brandonlopes.ca/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jan 2020 19:15:57 -0500</pubDate>
-    <lastBuildDate>Wed, 22 Jan 2020 19:15:57 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 06 Jul 2020 15:19:49 -0400</pubDate>
+    <lastBuildDate>Mon, 06 Jul 2020 15:19:49 -0400</lastBuildDate>
+    <generator>Jekyll v4.1.0</generator>
     
       <item>
         <title>Book List</title>
@@ -38,118 +38,8 @@
 &lt;p&gt;Atomic Habits is the reason I started going to the library every day to work on this website, and I couldn’t be more grateful.&lt;/p&gt;
 </description>
         <pubDate>Tue, 14 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/book-list</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/book-list</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Making This Site</title>
-        <description>&lt;p&gt;Getting a Namecheap domain, setting up CNAME, and linking the domain to Github Pages
-&lt;!--more--&gt;
-The under construction page&lt;/p&gt;
-
-&lt;p&gt;Making your own site with this method&lt;/p&gt;
-
-&lt;p&gt;Knowing MD, HTML, and CSS is a requirement. Git too, kind of? JS optional&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/making-this-site</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/making-this-site</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Digitized Journal</title>
-        <description>&lt;p&gt;I have never written in a journal before. Nor have I been a keen note taker.&lt;/p&gt;
-
-&lt;p&gt;This page will be a curated digitization of my first attempt at keeping a physical journal. The parts I find most useful will be kept here for easy recollection.&lt;/p&gt;
-
-&lt;h4 id=&quot;june-4th-2019---putting-whats-in-my-head-onto-paper&quot;&gt;June 4th 2019 - Putting What’s in My Head onto Paper&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Only worry about things within your control.&lt;/li&gt;
-  &lt;li&gt;I need and want to replace mindless YouTube surfing with better, healthier habits like reading, cooking, exercising, and cleaning&lt;/li&gt;
-  &lt;li&gt;This bus is not an ideal place to write&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-5th-2019---the-goal&quot;&gt;June 5th 2019 - The Goal&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Living a more intentional and meaningful life is the goal. Being able to think about the things I do and why is important to me.&lt;/li&gt;
-  &lt;li&gt;Memento Mori (&lt;em&gt;remember your mortality&lt;/em&gt;) and live in the present.&lt;/li&gt;
-  &lt;li&gt;Just because life is indifferent to you, doesn’t mean you have to be indifferent to life.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-6th-2019---mindfulness-and-habit-building&quot;&gt;June 6th 2019 - Mindfulness and Habit Building&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Whatever “ism” you’re currently infatuated with, keep it to yourself and live your best and only life with it. Preaching your philosophies makes you an ass-hole.&lt;/li&gt;
-  &lt;li&gt;Remember that small but continuous efforts are how you build healthy habits and get shit done.&lt;/li&gt;
-  &lt;li&gt;Try to be as mindful in public as you are in private. Think before you speak or make a decision and slow down.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-7th-2019---fogginess&quot;&gt;June 7th 2019 - Fogginess&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;After feeling incredibly foggy all day following a breakfast of coffee and candy, the only useful entry on this day was coming to the conclusion that what you put into your body is what you get out of it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-8th-2019---keeping-an-open-mind&quot;&gt;June 8th 2019 - Keeping an Open Mind&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Always be open to alternatives. It might not end up being an improvement, but there is always something to learn from trying to see and do things differently.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-9th-2019---hating-my-job&quot;&gt;June 9th 2019 - Hating My Job&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;You may find very little fulfillment in your part-time minimum wage job, but finding a new one is not the answer to your problems. It is simply a thing you do for money.&lt;/li&gt;
-  &lt;li&gt;You control what you do outside of your shifts and can use this time to work hard on the things that are important to you&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-12th-2019---habit-reminders&quot;&gt;June 12th 2019 - Habit Reminders&lt;/h4&gt;
-&lt;p&gt;The following are tasks I want to do in some form every day;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Program&lt;/li&gt;
-  &lt;li&gt;Read&lt;/li&gt;
-  &lt;li&gt;Declutter and clean&lt;/li&gt;
-  &lt;li&gt;Physical exercise&lt;/li&gt;
-  &lt;li&gt;Meditate and live in the moment&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-14th-2019---questioning-programming&quot;&gt;June 14th 2019 - Questioning Programming&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Why do you care about programming?
-    &lt;ul&gt;
-      &lt;li&gt;I care about programming because I love computers and it gives me a way create things and solve programs with them.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The goal was to learn programming to make games, is that still the case?
-    &lt;ul&gt;
-      &lt;li&gt;I would still like to use the coding skills I’ve aquired to make games that others can enjoy, but that is not the priority anymore. I want to focus my efforts on making beautiful and efficient websites for myself and others&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-19th-2019---school&quot;&gt;June 19th 2019 - School&lt;/h4&gt;
-&lt;p&gt;This is a verbatim quote of what I wrote on this day. This was around the time I decided to drop out of College.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Am I allowed to not do something simply because I don’t like or believe in it?  I hate school and all of the nonsense associated with it, but I also don’t think I have the discipline to learn and study on my own. That can be changed though. All I can do is be a better version of myself than yesterday. If there is no growth between my days I am wasting the limited amount of time I have on this planet.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;june-27th-2019---the-library-and-my-ideal-morning&quot;&gt;June 27th 2019 - The Library and My Ideal Morning&lt;/h4&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;It has been a quite a while since I last wrote anything in this journal. I’m currently at the library, something I have wanted to do for a very long time now, and it’s certainly a refreshing change of scenery.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;What would your ideal day look like?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It would consist of waking up early (around 5am) and exercising, meditating, planning and preparing for the day ahead, and going for a walk. I would have a conversation with my mom, and let her know how much I love her before she left that day for work. I would then get some reading done and head to the Library when it opened to program and write.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;These all seem perfectly simple and achievable, what stops you from having this day every day?&lt;/p&gt;
-</description>
-        <pubDate>Sun, 12 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/journal</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/journal</guid>
+        <link>http://localhost:4000/book-list</link>
+        <guid isPermaLink="true">http://localhost:4000/book-list</guid>
         
         
       </item>
@@ -180,8 +70,8 @@ The under construction page&lt;/p&gt;
 &lt;p&gt;The American said, “then you would retire. Move to a small coastal fishing village where you would sleep late, fish a little, play with your kids, take siestas with your wife, stroll into the village in the evenings where you would sip wine and play your guitar with your amigos.”&lt;/p&gt;
 </description>
         <pubDate>Fri, 03 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/mexican-fisherman</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/mexican-fisherman</guid>
+        <link>http://localhost:4000/mexican-fisherman</link>
+        <guid isPermaLink="true">http://localhost:4000/mexican-fisherman</guid>
         
         
       </item>
@@ -262,8 +152,8 @@ The under construction page&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/quotes</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/quotes</guid>
+        <link>http://localhost:4000/quotes</link>
+        <guid isPermaLink="true">http://localhost:4000/quotes</guid>
         
         
       </item>
