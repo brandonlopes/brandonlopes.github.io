@@ -19,7 +19,9 @@ function themeSelector() {
         if (localStorage.getItem("currentTheme")) {
             currentTheme = localStorage.getItem("currentTheme");
             changeTheme(JSON.parse(currentTheme));
-        } else saveTheme(lightMode);
+        } else {
+            saveTheme(lightMode);
+        }
     }
 
     function saveTheme(theme) {
