@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Meditations
-permalink: /meditations-notes
+permalink: notes/meditations-notes
 ---
 
 Notes go here:

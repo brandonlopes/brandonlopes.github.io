@@ -169,14 +169,14 @@ ul.post-list{
   text-align: center;
 }
 
-/* .post-content li{
+.post-content li{
   list-style: disc;
   margin-left: 20px;
-} */
+}
 
 .post-content li li{
   list-style: circle;
-  /* margin-left: 20px; */
+  margin-left: 20px;
 }
 
 .post-content img{
