@@ -123,6 +123,6 @@ function quoteOfTheDay() {
 
     let quoteText = document.getElementById("quoteOfTheDay");
     let quoteAuthor = document.getElementById("quoteAuthor");
-    quoteText.innerText = quoteOfTheDay.text;
+    quoteText.innerText = `“${quoteOfTheDay.text}”`;
     quoteAuthor.innerText = `- ${quoteOfTheDay.author}`
 }

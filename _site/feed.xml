@@ -6,9 +6,26 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Jul 2020 09:22:07 -0400</pubDate>
-    <lastBuildDate>Tue, 07 Jul 2020 09:22:07 -0400</lastBuildDate>
+    <pubDate>Wed, 08 Jul 2020 15:40:13 -0400</pubDate>
+    <lastBuildDate>Wed, 08 Jul 2020 15:40:13 -0400</lastBuildDate>
     <generator>Jekyll v4.1.0</generator>
+    
+      <item>
+        <title>Meditations</title>
+        <description>&lt;p&gt;Notes go here:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wake up and do things&lt;/li&gt;
+  &lt;li&gt;Control your emotions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 08 Jul 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/meditations-notes</link>
+        <guid isPermaLink="true">http://localhost:4000/meditations-notes</guid>
+        
+        
+        <category>notes</category>
+        
+      </item>
     
       <item>
         <title>Book List</title>
@@ -42,6 +59,8 @@
         <guid isPermaLink="true">http://localhost:4000/book-list</guid>
         
         
+        <category>blog</category>
+        
       </item>
     
       <item>
@@ -74,11 +93,15 @@
         <guid isPermaLink="true">http://localhost:4000/mexican-fisherman</guid>
         
         
+        <category>blog</category>
+        
       </item>
     
       <item>
         <title>Quotes</title>
         <description>&lt;p&gt;This is a collection of quotes and sayings I find valuable&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;“We all have two lives. The second begins when we realize we only have one.” -Confucius&lt;/p&gt;
 
@@ -155,6 +178,8 @@
         <link>http://localhost:4000/quotes</link>
         <guid isPermaLink="true">http://localhost:4000/quotes</guid>
         
+        
+        <category>blog</category>
         
       </item>
     

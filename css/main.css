@@ -20,8 +20,8 @@ Table of Contents
   --menu-icon-display: none;
   --mobile-menu-display: none;
   --nav-height: 2.5em;
-  --background-color: ;
-  --text-color: ;
+  --background-color: white;
+  --text-color: #24292e;
   --box-shadow: 0px 4px 8px 0px black;
   --golden-ratio: 1.61803em;
 }
@@ -30,7 +30,8 @@ body{
   /* position: relative; */
   color: var(--text-color);
   line-height: 1.65em;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  /* font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; */
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   word-wrap: break-word;
   margin: 0px;
@@ -44,8 +45,8 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  font-weight: bold;
-  font-size: 21px;
+  /* font-weight: bold; */
+  /* font-size: 21px; */
   margin: 0px;
   padding-top: 0.5em;
   width: 100%;
@@ -66,7 +67,8 @@ a:hover{
 }
 
 hr{
-  border: 0.5px solid lightgrey;
+  border: 1px solid lightgray;
+  opacity: 0.7;
 }
 
 blockquote{
@@ -79,7 +81,7 @@ ul{
   margin: 0;
 }
 
-h1, h2{
+h1, h2, h3{
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
@@ -89,17 +91,16 @@ footer{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 7.5em;
+  height: 4em;
   text-align: center;
-  margin: auto;
-  margin-top: 1.5em;
+  /* margin-top: 1.5em; */
   border-top: 1px solid lightgrey;
+  /* border-bottom: 1px solid lightgrey; */
 }
 
-footer h3{
-  padding: var(--base-padding);
+footer p, footer a{
+  opacity: 0.7;
 }
-
 
 input[type=checkbox] {
   visibility: hidden;
@@ -117,6 +118,16 @@ label{
 2. Classes
 -----------------
 */
+
+.light-mode{
+  color: #24292e;
+  background-color: white;
+}
+
+.dark-mode{
+  color: white;
+  background-color: #24292e;
+}
 
 .readMore{
   padding: 0.5em;
@@ -158,14 +169,14 @@ ul.post-list{
   text-align: center;
 }
 
-.post-content li{
+/* .post-content li{
   list-style: disc;
   margin-left: 20px;
-}
+} */
 
 .post-content li li{
   list-style: circle;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .post-content img{
@@ -224,6 +235,11 @@ ul.post-list{
   margin: auto;
 }
 
+.wrapper h1{
+  text-align: center;
+  margin: 2em 0px 2em 0px;
+}
+
 .quoteOfTheDayContainer{
   border-bottom: 1px solid lightgrey;
 }
@@ -236,6 +252,7 @@ ul.post-list{
 
 #quoteOfTheDay{
   margin-bottom: 0px;
+  font-style: italic;
 }
 
 #quoteAuthor{
@@ -306,6 +323,7 @@ ul.post-list{
 
   nav{
     display: block;
+    font-size: 21px;
     /* justify-content: space-between;
     flex-wrap: wrap; */
     z-index: 1;
@@ -331,7 +349,7 @@ ul.post-list{
   }
 
   .light-switch{
-    margin:3.5em 0px 0px 0px;
+    margin: 2.5em 0px 0px 0px;
     float: right;
     -webkit-transition: .4s;
     transition: .4s;
@@ -341,7 +359,7 @@ ul.post-list{
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
-    height: 7em;
+    height: 8em;
     /* padding: 0.5em; */
     margin-top: 1em;
     width: 100%;

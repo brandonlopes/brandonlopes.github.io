@@ -1,0 +1,9 @@
+<ul class="wrapper">
+    {% for note in site.categories.notes %}
+      <li>
+        <h3>
+          <a class="post-link" href="{{ note.url | prepend: site.baseurl }}">{{ note.title }}</a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>

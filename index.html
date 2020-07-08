@@ -3,17 +3,6 @@ layout: default
 ---
 <div class="wrapper">
   {% include quote-of-the-day.html %}
-
-  {% for post in site.posts limit:1 %}
-  <h2>Latest Post:</h2>
-  <div>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-    <p>{{ post.excerpt }} <a class="post-link readMore" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
-    </p>
-  </div>
-  {% endfor %}
+  
+  {% include latest-post.html %}
 </div>
