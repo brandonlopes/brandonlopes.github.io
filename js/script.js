@@ -20,7 +20,8 @@ function themeSelector() {
             currentTheme = localStorage.getItem("currentTheme");
             changeTheme(JSON.parse(currentTheme));
         } else {
-            saveTheme(lightMode);
+            
+            saveTheme(darkMode);
         }
     }
 
@@ -104,8 +105,8 @@ function quoteOfTheDay() {
                 author: "James Clear"
             },
             {
-                text: "We all have two lives. The second begins when we realize we only have one.",
-                author: "Confucius"
+                text: "Everything needs everything else in order to be anything at all",
+                author: "Alan Watts"
             },
             {
                 text: "Waste no more time arguing about what a good man should be. Be one.",
