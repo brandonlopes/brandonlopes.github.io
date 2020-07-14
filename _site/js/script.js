@@ -19,7 +19,10 @@ function themeSelector() {
         if (localStorage.getItem("currentTheme")) {
             currentTheme = localStorage.getItem("currentTheme");
             changeTheme(JSON.parse(currentTheme));
-        } else saveTheme(lightMode);
+        } else {
+            
+            saveTheme(darkMode);
+        }
     }
 
     function saveTheme(theme) {
@@ -61,9 +64,9 @@ function mobileMenu() {
 
     function toggleMobileMenu() {
         if (menuIcon.classList.contains("change")) {
-            root.style.setProperty("--nav-height", "100%");
+            root.style.setProperty("--nav-height", "15em");
             setTimeout(function () {
-                root.style.setProperty("--mobile-menu-display", "block");
+                root.style.setProperty("--mobile-menu-display", "flex");
             }, 200);
         } else {
             root.style.setProperty("--nav-height", "2.5em");
@@ -102,8 +105,8 @@ function quoteOfTheDay() {
                 author: "James Clear"
             },
             {
-                text: "We all have two lives. The second begins when we realize we only have one.",
-                author: "Confucius"
+                text: "Everything needs everything else in order to be anything at all",
+                author: "Alan Watts"
             },
             {
                 text: "Waste no more time arguing about what a good man should be. Be one.",
@@ -121,6 +124,6 @@ function quoteOfTheDay() {
 
     let quoteText = document.getElementById("quoteOfTheDay");
     let quoteAuthor = document.getElementById("quoteAuthor");
-    quoteText.innerText = quoteOfTheDay.text;
+    quoteText.innerText = `“${quoteOfTheDay.text}”`;
     quoteAuthor.innerText = `- ${quoteOfTheDay.author}`
 }

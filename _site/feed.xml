@@ -4,18 +4,195 @@
     <title>Brandon Lopes</title>
     <description>Technology, philosophy, and the little things
 </description>
-    <link>https://brandonlopes.ca/</link>
-    <atom:link href="https://brandonlopes.ca/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jan 2020 19:15:57 -0500</pubDate>
-    <lastBuildDate>Wed, 22 Jan 2020 19:15:57 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 14 Jul 2020 10:16:51 -0400</pubDate>
+    <lastBuildDate>Tue, 14 Jul 2020 10:16:51 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Atomic Habits - James Clear</title>
+        <description>&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Small and consistent changes/actions are the best way to build habits and lead to big results&lt;/li&gt;
+  &lt;li&gt;Forget about goals, focus on systems instead
+    &lt;ul&gt;
+      &lt;li&gt;Goals are for setting direction, systems are for making progress&lt;/li&gt;
+      &lt;li&gt;Achieving a goal only changes your life for the moment, systems change your life continuously. Focus on your inputs instead of your output.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fall in love with the process, and you will always be happy&lt;/li&gt;
+  &lt;li&gt;4 Laws of Habit Building - Explained with brushing your teeth
+    &lt;ul&gt;
+      &lt;li&gt;Make it &lt;strong&gt;Obvious&lt;/strong&gt; - The sensation of morning breath makes it pretty obvious that your teeth need to be brushed&lt;/li&gt;
+      &lt;li&gt;Make it &lt;strong&gt;Attractive&lt;/strong&gt; - You don’t want bad breath or yellow teeth, so brushing your teeth is pretty attractive&lt;/li&gt;
+      &lt;li&gt;Make it &lt;strong&gt;Easy&lt;/strong&gt; - All you need is water, tooth paste, and some scrubbin&lt;/li&gt;
+      &lt;li&gt;Make it &lt;strong&gt;Satisfying&lt;/strong&gt; - That fresh feeling in your mouth and minty smell is what cements the habit and makes you continue to do it. If tooth paste didn’t smell good or make your mouth feel clean, you would never brush your teeth with it, if it all.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Habits are learned solutions to problems
+    &lt;ul&gt;
+      &lt;li&gt;Your shitty Netflix/Gaming habit is the learned solution to your problem of stress or boredom, find a new one&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Just get your reps in. Repetition is how patterns are formed&lt;/li&gt;
+  &lt;li&gt;Active practice &amp;gt; passive learning&lt;/li&gt;
+  &lt;li&gt;Best way to practice is to make it easy and eventually automatic&lt;/li&gt;
+  &lt;li&gt;Make good habits easy to do, and bad habits hard/impossible to do through environment design.
+    &lt;ul&gt;
+      &lt;li&gt;An example would be to take the batteries out of the remote after using your TV. That extra bit of effort might stop a future Netflix binge.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;2 Minute Rule&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Make “showing up” the first habit and start by &lt;strong&gt;only&lt;/strong&gt; doing 2 minutes of the activity and stop completely after those 2 minutes.&lt;/li&gt;
+      &lt;li&gt;Chances are, you’ll want to continue to do the thing after the 2 minutes are up. If not, that’s okay because 2 minutes of something is better than not doing it at all.&lt;/li&gt;
+      &lt;li&gt;1 push up is infinitely better than 0. A shitty program or story or drawing is infinitely better than nothing at all.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1 habit for 1 location&lt;/li&gt;
+  &lt;li&gt;If space is limited, use specific spaces for specific habits. Examples:
+    &lt;ul&gt;
+      &lt;li&gt;Bed is only for sleeping&lt;/li&gt;
+      &lt;li&gt;Second desk for writing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Work hard on the things that come easy. Doing the thing when it’s boring or painful is the difference between success and failure, between a professional and an amateur.” Do the thing every day. Through the ups and downs. Consistency is key
+    &lt;ul&gt;
+      &lt;li&gt;Find your niche and exploit it. The things that you’re probably better at than the average person. Combine them to make that funny comic combo of being funnier than the average person, plus being a decent artist&lt;/li&gt;
+      &lt;li&gt;You’re a decent writer and coder, do something with them&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There’s going to be a lot of workouts, coding, and reading that you won’t want to do, but you have never regretted doing them. Don’t let life get in the way of your goals and habits. Do them and show up every day&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Keep your identity small, clinging too tightly to one aspect of your personality/identity will only result in disaster.
+    &lt;ul&gt;
+      &lt;li&gt;Instead of being a vegan, you are someone that cares about the things you do and the food you eat and the impact it has on yourself and others&lt;/li&gt;
+      &lt;li&gt;Tao Te Ching reference: Be soft and yielding, easy and adaptable, like water&lt;/li&gt;
+      &lt;li&gt;Lack of self awareness is poison, reflection and review are the antidote&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 10 Jul 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/notes/atomic-habits-notes</link>
+        <guid isPermaLink="true">http://localhost:4000/notes/atomic-habits-notes</guid>
+        
+        
+        <category>notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Deep Work - Cal Newport</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;this is a test link&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Focusing deeply on a single task without interuptions is the definition of deep work and the method for producing quality work becoming the best at a certain task/in a certain field etc. This is able to be done anywhere, and I can turn my room and home into a haven for this work&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Be intentional with leisure time. Fill the remaining 16 hours of your day with moving, and you’ll end it feeling accomplished, motivated, and happy. The next work day will be improved by your meaningful leisure, or “the day within a day” and will show you the difference between living, and simply existing&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;deep-work-limits&quot;&gt;Deep work limits&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;4 hours a day on true, uninterrupted depth, according to a paper on deliberate practice&lt;/li&gt;
+  &lt;li&gt;1 hour a day on a new skill&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;scheduling-every-minute-of-your-day&quot;&gt;Scheduling every minute of your day&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pause during the day and ask yourself “what makes the most sense right now?”&lt;/li&gt;
+  &lt;li&gt;When making a schedule, minimum size is of block should be 30 minutes&lt;/li&gt;
+  &lt;li&gt;If interrupted, recreate schedule and/or remove things. Goal is not to be rigid, but to be thoughtful about your day&lt;/li&gt;
+  &lt;li&gt;Deep work requires you to respect your time. Scheduling your day will make sure you can do everything that matters to you and how shallow some activities are&lt;/li&gt;
+  &lt;li&gt;A schedule should be treated as a guideline for your day. Some structure is better than no structure at all&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Jul 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/notes/deep-work-notes</link>
+        <guid isPermaLink="true">http://localhost:4000/notes/deep-work-notes</guid>
+        
+        
+        <category>notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Meditations - Marcus Aurelius</title>
+        <description>&lt;p&gt;Notes go here:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wake up and do things&lt;/li&gt;
+  &lt;li&gt;Control your emotions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 08 Jul 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/notes/meditations-notes</link>
+        <guid isPermaLink="true">http://localhost:4000/notes/meditations-notes</guid>
+        
+        
+        <category>notes</category>
+        
+      </item>
     
       <item>
         <title>Book List</title>
         <description>&lt;p&gt;Books that have changed my life and how I operate in the world for the better.
 &lt;!--more--&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;the-meditations-of-marcus-aurelius-antoninus&quot;&gt;The Meditations of Marcus Aurelius Antoninus&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/meditations.jpg&quot; alt=&quot;Meditations&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am not a religious person, but if I had a bible, this would be it. This is the book that ignited a love of philosophy, reading, and being the best man I can be for myself and the people around me.&lt;/p&gt;
+
+&lt;p&gt;The nearly two-thousand year-old private journal of the Roman Emperor Marcus Aurelius, Meditations contains practical wisdom and stoic teachings that stand the test of time and continues to be a relevant member of home libraries to this day.&lt;/p&gt;
+
+&lt;p&gt;If you haven’t read this book yet, I implore you to. You won’t regret it.&lt;/p&gt;
+
 &lt;hr /&gt;
+
+&lt;h3 id=&quot;atomic-habits&quot;&gt;Atomic Habits&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/atomic-habits.jpg&quot; alt=&quot;Atomic Habits&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I love this book. It is astounding and I have read and listened to it dozens of times.&lt;/p&gt;
+
+&lt;p&gt;James Clear drives home the point that small, consistent efforts and enjoying the process are what allow you to reach your goals and do great things. If you’re interested at all in how habits work and how to build/break them, give this book a go.&lt;/p&gt;
+
+&lt;p&gt;Atomic Habits is the reason I started going to the library every day to work on this website, and I couldn’t be more grateful.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Jan 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/blog/book-list</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/book-list</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Book List</title>
+        <description>&lt;p&gt;Books that have changed my life and how I operate in the world for the better.
+&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;the-meditations-of-marcus-aurelius-antoninus&quot;&gt;The Meditations of Marcus Aurelius Antoninus&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/images/meditations.jpg&quot; alt=&quot;Meditations&quot; /&gt;&lt;/p&gt;
@@ -38,233 +215,11 @@
 &lt;p&gt;Atomic Habits is the reason I started going to the library every day to work on this website, and I couldn’t be more grateful.&lt;/p&gt;
 </description>
         <pubDate>Tue, 14 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/book-list</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/book-list</guid>
+        <link>http://localhost:4000/blog/book-list</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/book-list</guid>
         
         
-      </item>
-    
-      <item>
-        <title>Making This Site</title>
-        <description>&lt;p&gt;Getting a Namecheap domain, setting up CNAME, and linking the domain to Github Pages
-&lt;!--more--&gt;
-The under construction page&lt;/p&gt;
-
-&lt;p&gt;Making your own site with this method&lt;/p&gt;
-
-&lt;p&gt;Knowing MD, HTML, and CSS is a requirement. Git too, kind of? JS optional&lt;/p&gt;
-</description>
-        <pubDate>Tue, 14 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/making-this-site</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/making-this-site</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Digitized Journal</title>
-        <description>&lt;p&gt;I have never written in a journal before. Nor have I been a keen note taker.&lt;/p&gt;
-
-&lt;p&gt;This page will be a curated digitization of my first attempt at keeping a physical journal. The parts I find most useful will be kept here for easy recollection.&lt;/p&gt;
-
-&lt;h4 id=&quot;june-4th-2019---putting-whats-in-my-head-onto-paper&quot;&gt;June 4th 2019 - Putting What’s in My Head onto Paper&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Only worry about things within your control.&lt;/li&gt;
-  &lt;li&gt;I need and want to replace mindless YouTube surfing with better, healthier habits like reading, cooking, exercising, and cleaning&lt;/li&gt;
-  &lt;li&gt;This bus is not an ideal place to write&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-5th-2019---the-goal&quot;&gt;June 5th 2019 - The Goal&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Living a more intentional and meaningful life is the goal. Being able to think about the things I do and why is important to me.&lt;/li&gt;
-  &lt;li&gt;Memento Mori (&lt;em&gt;remember your mortality&lt;/em&gt;) and live in the present.&lt;/li&gt;
-  &lt;li&gt;Just because life is indifferent to you, doesn’t mean you have to be indifferent to life.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-6th-2019---mindfulness-and-habit-building&quot;&gt;June 6th 2019 - Mindfulness and Habit Building&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Whatever “ism” you’re currently infatuated with, keep it to yourself and live your best and only life with it. Preaching your philosophies makes you an ass-hole.&lt;/li&gt;
-  &lt;li&gt;Remember that small but continuous efforts are how you build healthy habits and get shit done.&lt;/li&gt;
-  &lt;li&gt;Try to be as mindful in public as you are in private. Think before you speak or make a decision and slow down.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-7th-2019---fogginess&quot;&gt;June 7th 2019 - Fogginess&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;After feeling incredibly foggy all day following a breakfast of coffee and candy, the only useful entry on this day was coming to the conclusion that what you put into your body is what you get out of it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-8th-2019---keeping-an-open-mind&quot;&gt;June 8th 2019 - Keeping an Open Mind&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Always be open to alternatives. It might not end up being an improvement, but there is always something to learn from trying to see and do things differently.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-9th-2019---hating-my-job&quot;&gt;June 9th 2019 - Hating My Job&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;You may find very little fulfillment in your part-time minimum wage job, but finding a new one is not the answer to your problems. It is simply a thing you do for money.&lt;/li&gt;
-  &lt;li&gt;You control what you do outside of your shifts and can use this time to work hard on the things that are important to you&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-12th-2019---habit-reminders&quot;&gt;June 12th 2019 - Habit Reminders&lt;/h4&gt;
-&lt;p&gt;The following are tasks I want to do in some form every day;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Program&lt;/li&gt;
-  &lt;li&gt;Read&lt;/li&gt;
-  &lt;li&gt;Declutter and clean&lt;/li&gt;
-  &lt;li&gt;Physical exercise&lt;/li&gt;
-  &lt;li&gt;Meditate and live in the moment&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-14th-2019---questioning-programming&quot;&gt;June 14th 2019 - Questioning Programming&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Why do you care about programming?
-    &lt;ul&gt;
-      &lt;li&gt;I care about programming because I love computers and it gives me a way create things and solve programs with them.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The goal was to learn programming to make games, is that still the case?
-    &lt;ul&gt;
-      &lt;li&gt;I would still like to use the coding skills I’ve aquired to make games that others can enjoy, but that is not the priority anymore. I want to focus my efforts on making beautiful and efficient websites for myself and others&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;june-19th-2019---school&quot;&gt;June 19th 2019 - School&lt;/h4&gt;
-&lt;p&gt;This is a verbatim quote of what I wrote on this day. This was around the time I decided to drop out of College.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Am I allowed to not do something simply because I don’t like or believe in it?  I hate school and all of the nonsense associated with it, but I also don’t think I have the discipline to learn and study on my own. That can be changed though. All I can do is be a better version of myself than yesterday. If there is no growth between my days I am wasting the limited amount of time I have on this planet.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;june-27th-2019---the-library-and-my-ideal-morning&quot;&gt;June 27th 2019 - The Library and My Ideal Morning&lt;/h4&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;It has been a quite a while since I last wrote anything in this journal. I’m currently at the library, something I have wanted to do for a very long time now, and it’s certainly a refreshing change of scenery.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;What would your ideal day look like?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It would consist of waking up early (around 5am) and exercising, meditating, planning and preparing for the day ahead, and going for a walk. I would have a conversation with my mom, and let her know how much I love her before she left that day for work. I would then get some reading done and head to the Library when it opened to program and write.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;These all seem perfectly simple and achievable, what stops you from having this day every day?&lt;/p&gt;
-</description>
-        <pubDate>Sun, 12 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/journal</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/journal</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>The Mexican Fisherman</title>
-        <description>&lt;p&gt;A short story I found while browsing Reddit&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;An American banker was at the pier of a small coastal Mexican village where a small boat with just one fisherman docked. Inside the small boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish and asked how long it took to catch them.&lt;/p&gt;
-
-&lt;p&gt;The Mexican replied, “only a little while.” The American then asked why didnt he stay out longer and catch more fish? The Mexican said he had enough to support his familys immediate needs. The American then asked, “but what do you do with the rest of your time?”&lt;/p&gt;
-
-&lt;p&gt;The Mexican fisherman said, “I sleep late, fish a little, play with my children, take siestas with my wife, Maria, stroll into the village each evening where I sip wine, and play guitar with my amigos. I have a full and busy life.”&lt;/p&gt;
-
-&lt;p&gt;The American scoffed, “I am a Harvard MBA and could help you. You should spend more time fishing and with the proceeds, buy a bigger boat. With the proceeds from the bigger boat, you could buy several boats, eventually you would have a fleet of fishing boats. Instead of selling your catch to a middleman you would sell directly to the processor, eventually opening your own cannery. You would control the product, processing, and distribution. You would need to leave this small coastal fishing village and move to Mexico City, then LA and eventually New York City, where you will run your expanding enterprise.”&lt;/p&gt;
-
-&lt;p&gt;The Mexican fisherman asked, “but, how long will this all take?”&lt;/p&gt;
-
-&lt;p&gt;To which the American replied, “15-20 years.”&lt;/p&gt;
-
-&lt;p&gt;“But what then?” Asked the Mexican.&lt;/p&gt;
-
-&lt;p&gt;The American laughed and said, “thats the best part! When the time is right you would announce an IPO and sell your company stock to the public and become very rich, you would make millions!”&lt;/p&gt;
-
-&lt;p&gt;“Millions? Then what?”&lt;/p&gt;
-
-&lt;p&gt;The American said, “then you would retire. Move to a small coastal fishing village where you would sleep late, fish a little, play with your kids, take siestas with your wife, stroll into the village in the evenings where you would sip wine and play your guitar with your amigos.”&lt;/p&gt;
-</description>
-        <pubDate>Fri, 03 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/mexican-fisherman</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/mexican-fisherman</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Quotes</title>
-        <description>&lt;p&gt;This is a collection of quotes and sayings I find valuable&lt;/p&gt;
-
-&lt;p&gt;“We all have two lives. The second begins when we realize we only have one.” -Confucius&lt;/p&gt;
-
-&lt;p&gt;“This too shall pass” -Unknown&lt;/p&gt;
-
-&lt;p&gt;“We suffer more often in imagination than we do in reality” -Seneca&lt;/p&gt;
-
-&lt;p&gt;“I have 3 treasures that I keep and prize: one is kindness, second is frugality, and third is not presuming to take precedence over others. By kindness one can be brave, by frugality one can reach out, by not presuming to take precedence one can survive effectively” - Master Sun Tzu&lt;/p&gt;
-
-&lt;p&gt;“Don’t let your imagination be crushed by life as a whole. Don’t try to picture everything bad that could possibly happen. Stick with the situation at hand, and ask, “Why is this so unbearable? Why can’t I endure it?” You’ll be embarrassed to answer.” - Marcus Aurelius&lt;/p&gt;
-
-&lt;p&gt;“To feel affection for people even when they make mistakes is uniquely human. You can do it, if you simply recognize: that they’re human too, that they act out of ignorance against their will, and that you’ll both be dead before long. And, above all, that they haven’t really hurt you.” - Marcus Aurelius&lt;/p&gt;
-
-&lt;p&gt;“Learn to enjoy the process. Love the daily discipline of showing up everyday and having the thing itself generate its own satisfaction” - James Clear&lt;/p&gt;
-
-&lt;p&gt;“Perfection is achieved when there is nothing left to take away” - Antoine de Saint-Exupery&lt;/p&gt;
-
-&lt;p&gt;“Clarity refers to the focus on one particular message or goal at a time, rather than attempting to accomplish too much at once” - Michael Hoffman&lt;/p&gt;
-
-&lt;p&gt;“Simply focus on being better today than you were yesterday, and you’ll be happy with your achievements” - Marie Kondo&lt;/p&gt;
-
-&lt;p&gt;“Less is more. It’s also less. That’s the point.” - Greg McKeown&lt;/p&gt;
-
-&lt;p&gt;“Renounce the fruit of action, rejoice in action itself.” - Unknown&lt;/p&gt;
-
-&lt;p&gt;“All of humanity’s problems stem from man’s inability to sit quietly in a room alone” - Blaise Pascal&lt;/p&gt;
-
-&lt;p&gt;“Happiness is the absence of unhappiness. This reminds me that I don’t have to search for happiness. I just have to eliminate the things that make me unhappy.” - Unknown&lt;/p&gt;
-
-&lt;p&gt;“Happiness is your default state. I can relax. Happiness is already mine.”&lt;/p&gt;
-
-&lt;h2 id=&quot;on-the-shortness-of-life-by-seneca&quot;&gt;On the Shortness of Life by Seneca&lt;/h2&gt;
-
-&lt;p&gt;“Let us prepare our minds as if we’d come to the very end of life. Let us postpone nothing. Let us balance life’s books each day…The one who puts the finishing touches on their life each day is never short of time.” - Seneca&lt;/p&gt;
-
-&lt;p&gt;“Putting things off is the biggest waste of life: it snatches away each day as it comes, and denies us the present by promising the future. The greatest obstacle to living is expectancy, which hangs upon tomorrow, and loses today. You are arranging what lies in Fortune’s control, and abandoning what lies in yours. What are you looking at? To what goal are you straining? The whole future lies in uncertainty: live immediately.” - Seneca&lt;/p&gt;
-
-&lt;h2 id=&quot;thomas-jeffersons-summary-of-epicurean-ethics&quot;&gt;Thomas Jefferson’s summary of Epicurean ethics&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Happiness is the aim of life.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Emotional health is the foundation of happiness.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;When emotional health is present, everything comes together as it should.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pleasure is found in activities which satisfy our healthy, legitimate needs.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Continuing satisfaction of these healthy needs brings lasting contentment.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pleasurable activity is not itself happiness, but the means to produce it - for example, the relief of hunger brings satisfaction, and eating is the means to achieve it. It follows that these activities have a natural limit.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Our goal is to be not pained in body, nor troubled in mind.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Unhealthy needs, and fear, are the main causes of distress. We are free to turn ourselves away from them.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A healthy person is thoughtful, not impulsive or grasping, and is unafraid.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A troubled person is reckless, and driven by unhealthy needs and fear.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 01 Jan 2020 00:00:00 -0500</pubDate>
-        <link>https://brandonlopes.ca/quotes</link>
-        <guid isPermaLink="true">https://brandonlopes.ca/quotes</guid>
-        
+        <category>blog</category>
         
       </item>
     

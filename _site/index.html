@@ -13,41 +13,39 @@
 
   <script defer src="/js/script.js"></script>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://brandonlopes.ca/">
-  <link rel="alternate" type="application/rss+xml" title="Brandon Lopes"
-    href="https://brandonlopes.ca/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/svg">
+  <!-- <link rel="alternate" type="application/rss+xml" title="Brandon Lopes"
+    href="http://localhost:4000/feed.xml"> -->
 </head>
 
 <body>
 
   <header>
   <nav>
-    <a class="site-title" href="/">Brandon Lopes</a>
-    <!-- <a href="#" class="menu-icon"><img id="menu-icon" src="/assets/images/menu.svg" alt=""></a> -->
+    <a href="/">Brandon Lopes</a>
 
     <div class="menu-icon" id="menu-icon">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div> 
     </div>
-  
-    <label class="light-switch">
-      <input type="checkbox" id="light-switch">
-      <span class="slider"></span>
-    </label>
+
     <div class="page-links">
-      <a href="/assets/documents/Brandon Lopes - Resume.pdf" download="BrandonLopes-Resume">Resume</a>
-      
-      
-      <a class="page-link" href="/about">About</a>
-      
-      
-      
-      <a class="page-link" href="/blog">Blog</a>
+      <!-- <a href="/assets/documents/Brandon Lopes - Resume.pdf" target="_blank">Resume</a> -->
       
       
       
       
+      <a class="page-link" href="/blog/">Blog</a>
+      
+      
+      
+      
+      
+      
+      
+      <a class="page-link" href="/notes/">Notes</a>
       
       
       
@@ -55,10 +53,15 @@
       
       
     </div>
+  
+    <label class="light-switch">
+      <input type="checkbox" id="light-switch">
+      <span class="slider"></span>
+    </label>
+    
   </nav>
 </header>
 
-  <div class="page-content">
     <div class="wrapper">
       <div class="wrapper">
   <div class="quoteOfTheDayContainer">
@@ -66,41 +69,23 @@
     <p id="quoteOfTheDay"></p>
     <p id="quoteAuthor"></p>
 </div>
-  <h1 style="text-align: center;">Hello there! <br> <svg enable-background="new 0 0 512 512" height="128px" id="Reindeer" version="1.1" viewBox="0 0 512 512" width="128px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="420.552" x2="289.8477" y1="66.7007" y2="220.8333"><stop offset="0.0054" style="stop-color:#968980"/><stop offset="1" style="stop-color:#4C3A2F"/></linearGradient><path d="M370.449,140.561c-18.027-8.149-23.517-24.749-25.148-35.32c-0.777-5.031,3.163-9.555,8.254-9.555   l0,0c3.981,0,7.389,2.813,8.18,6.714c1.608,7.93,6.744,20.822,23.061,27.045c11.953-12.138,19.182-29.006,19.182-51.016   c0-4.835-0.446-9.522-1.294-14.03c-1.018-5.409,2.11-10.731,7.382-12.313l0.107-0.033c5.845-1.753,12.029,1.736,13.412,7.679   c1.58,6.783,2.416,13.852,2.416,21.115c0,51.205-41.51,92.716-92.716,92.716c-3.628,0-7.206-0.216-10.726-0.621l-13.029-19.506   c2.111,0.184,4.245,0.297,6.405,0.297C336.311,153.733,355.334,149.479,370.449,140.561z" fill="url(#SVGID_1_)"/><path d="M333.284,173.563c-3.628,0-7.206-0.216-10.726-0.621l-13.029-19.506c2.111,0.184,4.245,0.297,6.405,0.297   c16.384,0,31.889-2.757,45.194-8.471c0.537,5.795,3.694,13.917,16.406,17.079C364.385,169.497,349.309,173.563,333.284,173.563z" fill="#4C3A2F"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="98.0198" x2="227.7016" y1="79.7896" y2="211.6787"><stop offset="0.0054" style="stop-color:#968980"/><stop offset="1" style="stop-color:#4C3A2F"/></linearGradient><path d="M142.585,140.561c18.028-8.149,23.517-24.749,25.148-35.32c0.777-5.031-3.164-9.555-8.254-9.555l0,0   c-3.981,0-7.389,2.813-8.18,6.714c-1.608,7.93-6.744,20.822-23.06,27.045c-11.954-12.138-19.181-29.006-19.181-51.016   c0-4.835,0.445-9.522,1.293-14.03c1.017-5.409-2.11-10.731-7.382-12.313l-0.108-0.033c-5.845-1.753-12.028,1.736-13.413,7.679   c-1.58,6.783-2.415,13.852-2.415,21.115c0,51.205,41.51,92.716,92.716,92.716c3.628,0,7.206-0.216,10.726-0.621l13.03-19.506   c-2.113,0.184-4.246,0.297-6.406,0.297C176.723,153.733,157.7,149.479,142.585,140.561z" fill="url(#SVGID_2_)"/><path d="M326.679,169.172h48.168c6.599,0,11.198,6.631,8.791,12.775c-4.265,10.885-18.108,21.952-37.839,24.776   C345.799,206.724,339.854,182.691,326.679,169.172z" fill="#B27969"/><path d="M334.063,178.814h26.165c2.977,0,4.411,3.683,2.19,5.664c-4.057,3.62-10.81,7.882-20.941,9.283   C339.629,189.131,337.171,183.826,334.063,178.814z" fill="#7F483C"/><path d="M179.75,173.563c3.628,0,7.206-0.216,10.726-0.621l13.03-19.506c-2.113,0.184-4.246,0.297-6.406,0.297   c-16.384,0-31.888-2.757-45.194-8.471c-0.537,5.795-3.694,13.917-16.406,17.079C148.649,169.497,163.724,173.563,179.75,173.563z" fill="#4C3A2F"/><path d="M186.198,169.172H138.03c-6.599,0-11.198,6.631-8.792,12.775c4.264,10.885,18.109,21.952,37.839,24.776   C167.077,206.724,173.023,182.691,186.198,169.172z" fill="#F0C5A7"/><path d="M178.813,178.814h-26.164c-2.977,0-4.411,3.683-2.19,5.664c4.056,3.62,10.809,7.882,20.941,9.283   C173.247,189.131,175.706,183.826,178.813,178.814z" fill="#8E5949"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_3_" x1="173.4167" x2="315.0718" y1="210.9844" y2="254.2851"><stop offset="0.0054" style="stop-color:#F0C5A7"/><stop offset="1" style="stop-color:#C48D7A"/></linearGradient><path d="M372.354,223.045v-9.06c0-7.313-5.928-13.242-13.24-13.242h-6.188   c-12.514-39.735-49.648-68.552-93.516-68.552l0,0c-54.14,0-98.028,43.888-98.028,98.027v86.67h190.27v-16.571   c0-41.844-18.63-51.904-18.63-51.904h20.113c3.638,0,7.216-1.104,10.134-3.274C368.812,241.014,372.354,234.473,372.354,223.045z" fill="url(#SVGID_3_)"/><g><path d="M359.114,200.743h-6.188c-11.27-35.784-42.51-62.701-80.65-67.703v67.703h13.617    c10.502,0,19.016,8.514,19.016,19.017v8.613c0,10.752-8.717,19.469-19.469,19.469h-49.433    c0.035,11.404,9.288,20.641,20.701,20.641h38.137c7.97,0,14.431,6.461,14.431,14.431v33.976h42.377v-16.571    c0-41.844-18.63-51.904-18.63-51.904h20.113c3.638,0,7.215-1.104,10.134-3.274c5.543-4.125,9.085-10.666,9.085-22.094v-9.06    C372.354,206.672,366.426,200.743,359.114,200.743z" fill="#B27969"/></g><path d="M266.868,248.202l-35.912,0.003l-0.004,4.909c0,13.461,10.531,23.854,23.992,23.854h11.924h11.925   c13.46,0,24.105-10.376,24.105-23.837l0.013-4.944L266.868,248.202z" fill="#0E121E"/><path d="M266.868,254.08c-12.752,0-23.629,7.174-27.802,17.211c4.266,3.668,9.809,5.883,15.876,5.883l11.923,0.005   l11.926-0.005c6.066,0,11.615-2.208,15.881-5.875C290.498,261.263,279.62,254.08,266.868,254.08z" fill="#CC3737"/><path d="M230.57,247.854v4.945c0,1.535,0.141,3.031,0.412,4.488c0.001,0.003,0.004,0.006,0.007,0.006h71.758   c0.003,0,0.006-0.003,0.007-0.005c0.271-1.458,0.412-2.955,0.412-4.49v-4.943l-36.297-0.075L230.57,247.854z" fill="#FFFFFF"/><path d="M250.377,190.495h-13.399c-1.897,0-3.436-1.538-3.436-3.436l0,0c0-1.897,1.538-3.436,3.436-3.436h13.399   c1.897,0,3.436,1.538,3.436,3.436l0,0C253.812,188.957,252.274,190.495,250.377,190.495z" fill="#2A373F"/><path d="M308.651,190.495h-13.4c-1.896,0-3.435-1.538-3.435-3.436l0,0c0-1.897,1.538-3.436,3.435-3.436h13.4   c1.896,0,3.436,1.538,3.436,3.436l0,0C312.086,188.957,310.547,190.495,308.651,190.495z" fill="#2A373F"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_4_" x1="173.9573" x2="339.2113" y1="341.7744" y2="480.3064"><stop offset="0.0054" style="stop-color:#F2CBB6"/><stop offset="1" style="stop-color:#C48D7A"/></linearGradient><path d="M156.7,369.834H364.61v85.195c0,4.402-3.568,7.971-7.971,7.971H164.063   c-4.066,0-7.362-3.296-7.362-7.362V369.834z" fill="url(#SVGID_4_)"/><path d="M399.569,431.864l-3.363-2.891c1.49-3.05,0.781-6.899-2.1-9.124c-20.307-15.68-33.718-38.86-33.718-38.86   v80.384l6.241-5.512l3.953,3.397c1.113,0.957,2.793,0.83,3.75-0.283c0.957-1.114,0.83-2.792-0.284-3.749l-3.396-2.919l8.527-7.531   l3.76,3.231c1.114,0.957,2.793,0.83,3.75-0.283s0.83-2.792-0.283-3.749l-3.203-2.753l9.418-8.318l3.481,2.992   c1.114,0.958,2.792,0.831,3.749-0.283C400.809,434.5,400.683,432.821,399.569,431.864z" fill="#AE1C53"/><rect fill="#FFFFFF" height="93.166" width="119" x="201.657" y="369.834"/><g><path d="M254.696,439.747c-0.424,0-0.85-0.021-1.277-0.064c-18.313-1.85-28.47-17.33-32.167-24.341    c-0.941-1.785-0.142-3.989,1.728-4.747l0,0c1.613-0.653,3.456,0.011,4.275,1.545c3.137,5.876,11.869,19.281,26.846,20.794    c1.74,0.178,3.438-0.433,4.672-1.667c1.194-1.195,1.783-2.832,1.615-4.491c-0.143-1.398-0.501-2.885-1.069-4.416l6.09-2.922    c0.041,0.068,4.761,7.703,12.227,9.095c3.512,0.654,7.205-0.187,11.008-2.501c1.48-0.901,3.402-0.553,4.459,0.821l0,0    c1.216,1.581,0.829,3.895-0.871,4.938c-5.299,3.254-10.634,4.396-15.9,3.397c-3.813-0.723-7.037-2.491-9.605-4.467    c-0.57,1.989-1.643,3.827-3.154,5.341C261.193,438.439,258.014,439.747,254.696,439.747z" fill="#BEE2ED"/></g><path d="M156.7,393.322h156.299c19.378,0,35.086,15.708,35.086,35.086V463h8.554c4.401,0,7.971-3.568,7.971-7.971   v-85.195H156.7V393.322z" fill="#B27969"/><path d="M312.999,393.322c2.632,0,5.192,0.299,7.658,0.848v-24.336h-119v23.488H312.999z" fill="#BEE2ED"/><path d="M202.755,108.39L202.755,108.39c5.045-2.854,11.439-0.908,14.057,4.264   c3.252,6.426,9.662,15.518,17.144,22.025c4.21,3.661,4.646,10.046,1.023,14.289l0,0c-3.541,4.146-9.705,4.773-14.019,1.439   c-7.051-5.449-16.974-15.124-22.676-29.517C196.428,116.208,198.37,110.87,202.755,108.39z" fill="#75685D"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_5_" x1="160.408" x2="372.209" y1="338.9414" y2="338.9414"><stop offset="0.0054" style="stop-color:#F47199"/><stop offset="1" style="stop-color:#AA1F51"/></linearGradient><path d="M364.536,378.333H156.02c-4.318,0-7.818-3.501-7.818-7.818v-63.146c0-4.317,3.5-7.818,7.818-7.818   h208.517c4.317,0,7.817,3.501,7.817,7.818v63.146C372.354,374.832,368.854,378.333,364.536,378.333z" fill="url(#SVGID_5_)"/><rect fill="#AE1C53" height="78.783" width="11.971" x="189.686" y="299.55"/><rect fill="#AE1C53" height="78.783" width="29.846" x="224.143" y="299.55"/><path d="M364.536,299.55H286.52c7.305,0,13.226,5.921,13.226,13.226v32.681c0,18.157-14.72,32.877-32.877,32.877   h97.668c4.317,0,7.817-3.501,7.817-7.818v-63.146C372.354,303.051,368.854,299.55,364.536,299.55z" fill="#AE1C53"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_6_" x1="117.9031" x2="207.5189" y1="366.9404" y2="482.7852"><stop offset="0.0054" style="stop-color:#F0C5A7"/><stop offset="0.465" style="stop-color:#E1B297"/><stop offset="1" style="stop-color:#C48D7A"/></linearGradient><path d="M109.116,377.062c-0.419,12.295,5.264,23.278,14.248,30.175v47.629c0,4.493,3.642,8.135,8.134,8.135   h36.175v-55.764c8.673-6.658,14.269-17.125,14.269-28.903c0-7.378-2.201-14.238-5.971-19.976h-60.84   C111.543,363.771,109.351,370.177,109.116,377.062z" fill="url(#SVGID_6_)"/><path d="M167.673,463v-55.764c8.673-6.658,14.269-17.125,14.269-28.903c0-7.378-2.201-14.238-5.971-19.976h-60.84   c-1.253,1.891-2.324,3.908-3.212,6.02l22.767,14.799c10.9,7.086,17.477,19.205,17.477,32.206V463H167.673z" fill="#B27969"/><g><path d="M158.27,319.348l-10.312,24.674c-0.941,2.252-4.104,2.326-5.15,0.121l-11.459-24.158    c-1.872-3.947-6.907-5.193-10.388-2.555c-10.024,7.602-16.416,19.742-16.11,33.361c0.499,22.244,18.42,39.746,40.669,39.746    c22.466,0,40.679-18.213,40.679-40.68c0-13.933-7.005-26.228-17.686-33.559C164.916,313.831,159.952,315.324,158.27,319.348z" fill="#2A373F"/></g><path d="M321.507,108.688L321.507,108.688c-5.046-2.854-11.438-0.908-14.057,4.264   c-3.252,6.426-9.662,15.518-17.144,22.025c-4.211,3.661-4.647,10.046-1.023,14.289l0,0c3.54,4.146,9.705,4.773,14.019,1.439   c7.051-5.449,16.974-15.124,22.677-29.517C327.834,116.507,325.891,111.168,321.507,108.688z" fill="#75685D"/><path d="M359.114,200.743h-6.188h-8.448c-5.543,0-10.036,4.493-10.036,10.036v0.051   c0,7.572,6.139,13.71,13.711,13.71h14.952c5.108,0,9.249-4.142,9.249-9.25v-1.305C372.354,206.672,366.426,200.743,359.114,200.743   z" fill="#2A373F"/><path d="M353.262,214.412h-7.141c-2.769,0-5.014-2.245-5.014-5.014l0,0c0-2.769,2.245-5.014,5.014-5.014h7.141   c2.77,0,5.014,2.245,5.014,5.014l0,0C358.276,212.167,356.031,214.412,353.262,214.412z" fill="#43555E"/></g></svg> </h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nibh tellus, vehicula ut maximus sed, fringilla a
-    justo. Nunc vitae efficitur nisl. Ut sapien erat, pretium et commodo nec, rutrum bibendum magna. Sed ut massa massa.
-    Etiam euismod neque lacus, id tincidunt risus iaculis a. Aliquam porta venenatis bibendum. Nam id varius nulla. Sed
-    vitae purus ac odio ornare vestibulum vitae tempor arcu. Nunc non venenatis purus. Duis a augue at nulla congue
-    egestas. Morbi mattis felis sit amet tortor euismod, fringilla viverra est elementum. </p>
-
   
-  <h2>Latest Post:</h2>
-  <div class="card">
-
-    <img class="thumbnail" src="/assets/images/books.jpg" alt="" srcset="">
+  
+  <div>
     <h2>
-      <br>
-      <a class="post-link" href="/book-list">Book List</a>
+      <a class="post-link" href="/blog/book-list">Book List</a>
     </h2>
-    <span class="post-meta">Jan 14, 2020</span>
+    <span class="post-meta">Jan 15, 2020</span>
 
-    <p><p>Books that have changed my life and how I operate in the world for the better.</p>
-
- <a class="post-link readMore" href="/book-list">Read More</a>
-      <!-- <span class="readMore">Read More</span> -->
+    <p>Books that have changed my life and how I operate in the world for the better.... <a class="read-more" href="/blog/book-list">Read More</a>
     </p>
   </div>
   
 </div>
     </div>
-  </div>
 
   <footer>
-    <h3>Check out the source code for <a href="https://github.com/brandonlopes/brandonlopes.github.io">this site</a> and
-      my other projects on Github <a href="https://github.com/brandonlopes"> <img style="height: 32px; width: 32px; display: block; margin: auto;" src="/assets/images/github.svg" alt=""> </a>
-    </h3>
-      <!-- <h2 class="footer-heading">Brandon Lopes</h2> -->
-
+  <p>Made with ❤️ using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://pages.github.com/" target="_blank">Github Pages</a></p>
 </footer>
 
 </body>

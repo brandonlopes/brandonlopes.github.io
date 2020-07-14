@@ -16,32 +16,37 @@ Table of Contents
 :root{
   --base-padding: 0.5em 0px 0px;
   --base-font-size: 18px;
-  --base-width: 75%;
   --menu-icon-display: none;
   --mobile-menu-display: none;
   --nav-height: 2.5em;
   --background-color: white;
   --text-color: #24292e;
-  --box-shadow: 0px 4px 8px 0px black;
+  --box-shadow: 0px 4px 8px 0px #24292e;
   --golden-ratio: 1.61803em;
 }
 
 body{
-  position: relative;
   color: var(--text-color);
   line-height: 1.65em;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-  font-size: 18px;
+  font-size: 1.1em;
   word-wrap: break-word;
   margin: 0px;
   padding: var(--base-padding);
   background: var(--background-color);
-  -webkit-transition: .4s;
-  transition: .4s;
 }
 
-header a{
-  margin-left: 10px;
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0px;
+  padding-top: 0.5em;
+  width: 100%;
+  height: var(--nav-height);
+  border-bottom: 1px solid lightgrey;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 a{
@@ -51,21 +56,12 @@ a{
 
 a:hover{
   cursor: pointer;
-  text-decoration: underline;
-}
-
-nav{
-  margin: 0px;
-  padding-top: 0.5em;
-  width: 100%;
-  height: var(--nav-height);
-  border-bottom: 1px solid lightgrey;
-  -webkit-transition: .4s;
-  transition: .4s;
+  opacity: 0.7;
 }
 
 hr{
-  border: 0.5px solid lightgrey;
+  border: 1px solid lightgray;
+  opacity: 0.7;
 }
 
 blockquote{
@@ -75,26 +71,27 @@ blockquote{
 
 ul{
   list-style-type: none;
-  margin: 0;
+  margin: 0px;
+  padding: 2.5px;
 }
 
-h1, h2{
+h1, h2, h3{
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 
 footer{
   width: 100%;
+  height: 6em;
   text-align: center;
-  margin: auto;
-  margin-top: 1.5em;
+  margin: 0px auto;
+  padding-top: 0.5em;
   border-top: 1px solid lightgrey;
 }
 
-footer h3{
-  padding: var(--base-padding);
+footer p, footer a{
+  opacity: 0.7;
 }
-
 
 input[type=checkbox] {
   visibility: hidden;
@@ -112,52 +109,45 @@ label{
 2. Classes
 -----------------
 */
-
-.readMore{
-  padding: 0.5em;
-  background: var(--text-color);
-  color: var(--background-color);
-}
-
-.readMore:focus, .readMore:hover{
-  text-decoration: none;
-  background: var(--background-color);
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-}
-
-.readMore:hover,
 .light-switch label:hover,
 .menu-icon:hover{
   cursor: pointer;
 }
 
-.card{
-  overflow: hidden;
-  margin-top: 1.5em;
-  border-top: 1px solid lightgrey;
+.post-title{
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  margin: 1em 0px;
+  padding: 0em 0px 1em;
+  border-bottom: 1px solid lightgrey;
+  /* background-color: var(--text-color);
+  color: var(--background-color); */
 }
 
-.card p, .card h2, .card span{
-  margin-top: 0px;
+.read-more{
+  text-decoration: underline;
+}
+.read-more:hover{
+  opacity: 0.7;
 }
 
-.thumbnail{
-  margin-top: 1em;
-  margin-left: 1em;
-  float: right;
-  image-orientation: from-image;
-  height: 200px;
-  max-width: 50%;
-  overflow: hidden;
+.post-meta{
+  opacity: 0.4;
 }
 
 .post-list li{
   margin-top: 1em;
 }
 
+.post-list li:first-child{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 ul.post-list{
   padding-left: 0px;
+  margin: 0px 0px;
 }
 
 .post-list h2{
@@ -165,22 +155,39 @@ ul.post-list{
   margin: 0px;
 }
 
+.post-content a, .post-content a:visited{
+  color: #3a90ef;
+}
+
+.post-content a:hover{
+  opacity: 0.5;
+}
+
 .post-content a, footer a{
   text-decoration: underline;
 }
 
+.post-content p, .post-content ul{
+  opacity: 0.9;
+}
+
 .post-content h3{
-  text-align: center;
+  /* text-align: center; */
+  margin: 0.8em 0px;
 }
 
 .post-content li{
   list-style: disc;
-  margin-left: 20px;
+  margin-top: 0.5em;
+  margin-left: 1em;
+  padding-left: 0px;
 }
 
 .post-content li li{
   list-style: circle;
-  margin-left: 20px;
+  list-style-position: inside;
+  margin-left: 1em;
+  padding-left: 0px;
 }
 
 .post-content img{
@@ -189,14 +196,10 @@ ul.post-list{
   height: 300px;
 }
 
-.site-title{
-  float: left;
-}
-
 .page-links{
-  text-align: center;
-  margin: auto;
-  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
 }
 
 .light-switch{
@@ -205,8 +208,6 @@ ul.post-list{
   height: 29px;
   background-color: var(--text-color);
   border-radius: 34px;
-  margin-right: 0.5em;
-  float: right;
 }
 
 .slider{
@@ -238,14 +239,13 @@ ul.post-list{
 }
 
 .wrapper{
-  min-height: 70vh;
+  min-height: 74vh;
   clear: both;
-  width: var(--base-width);
-  max-width: 700px;
+  width: 800px;
   margin: auto;
 }
 
-.quoteOfTheDayContainer{
+.quoteOfTheDayContainer{  
   border-bottom: 1px solid lightgrey;
 }
 
@@ -257,12 +257,13 @@ ul.post-list{
 
 #quoteOfTheDay{
   margin-bottom: 0px;
+  font-style: italic;
 }
 
 #quoteAuthor{
-  margin-top: 0px;
+  margin-top: 0.5em;
   margin-right: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   text-align: right;
 }
 
@@ -273,10 +274,7 @@ ul.post-list{
 */
 
 .menu-icon{
-  position: relative;
-  float: right;
   padding: 0px;
-  /* margin-right: 5.5em; */
   margin: 0px;
   display: var(--menu-icon-display);
 }
@@ -321,80 +319,65 @@ ul.post-list{
 -----------------
 */
 
-@media all and (max-width: 800px){
+@media all and (max-width: 960px){
   :root{
     --base-padding: 1em;
-    --base-width: auto;
     --menu-icon-display: block;
   }
 
   nav{
-    background: var(--background-color);
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    border-bottom: 1px solid lightgrey;
+    display: block;
+    /* font-size: 21px; */
+    /* font-weight: bold; */
+    /* z-index: 1; */
+  }
+
+  footer{
+    height: 5em;
+  }
+
+  .menu-icon{
+    float: right;
   }
 
   nav .page-links, nav .light-switch {
     display: var(--mobile-menu-display);
     animation-name: fadeIn;
-    animation-duration: 0.3s;
-  }
-
-  .site-title{
-    margin-left: 1em;
-  }
-
-  .menu-icon{
-    margin-right: 1em;
+    animation-duration: 0.2s;
   }
 
   .wrapper{
-    max-width: 450px;
-  }
-
-  .card{
-    margin: auto;
-    width: var(--base-width);
-  }
-
-  .card p, h2, span{
-    max-width: 75%;
-    margin-left: 0px;
-  }
-
-  .post, .post-list, .quoteOfTheDayContainer{
-    margin-top: 4em;
-  }
-
-  .thumbnail{
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
     max-width: 100%;
   }
 
+  .post, .post-list, .quoteOfTheDayContainer{
+    margin-top: 1em;
+  }
+
   .light-switch{
-    margin-top: 1.5em;
-    margin-right: 10px;
-    margin-bottom: 1em;
+    margin: 1.5em 0px 0px 0px;
     float: right;
-    clear: both;
     -webkit-transition: .4s;
     transition: .4s;
   }
 
   .page-links{
-    clear: both;
-    /* float: left; */
-    right: 0;
     text-align: center;
-    word-spacing: 15px;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    padding: 0.5em;
-    width: 90%;
-    border: 1px solid var(--text-color);
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8em;
+    /* padding: 0.5em; */
+    margin-top: 1em;
+    width: 100%;
+    /* border: 1px solid var(--text-color); */
+  }
+
+  .page-links a{
+    border-top: 1px dotted lightgrey;
+    padding: 0.5em 0px 0.5em 0px;
+  }
+
+  .page-links a:last-child{
+    border-bottom: 1px dotted lightgrey;
   }
 }

@@ -1,6 +1,6 @@
 ---
-layout: default
+layout: page
 title: Blog
-permalink: /blog
+permalink: /blog/
 ---
 {% include post-list.html %}
