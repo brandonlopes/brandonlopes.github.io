@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Atomic Habits by James Clear - Summary and Notes
+layout: post
+title: Atomic Habits - James Clear
 category: notes
 permalink: /notes/atomic-habits-notes
 ---

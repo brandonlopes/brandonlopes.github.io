@@ -4,7 +4,11 @@ layout: default
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}
+    {% if page.categories contains "notes"%}
+     <br> Summary and Notes
+    {% endif %}
+  </h1>
     <!-- <span class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"
         itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span
         itemprop="author" itemscope itemtype="http://schema.org/Person"><span
