@@ -6,7 +6,9 @@ layout: default
   <div>
     <h1 class="post-title" itemprop="name headline">{{ page.title }}
       {% if page.categories contains "notes"%}
-      <br> Summary and Notes
+      by {{page.author}}
+      <br> 
+      Summary and Notes
       {% endif %}
     </h1>
     <!-- <span class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"

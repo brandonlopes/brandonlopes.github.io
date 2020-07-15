@@ -54,12 +54,20 @@ function themeSelector() {
 
 function mobileMenu() {
     let menuIcon = document.getElementById("menu-icon");
+    let content = document.getElementById("wrapper");
     let root = document.documentElement;
 
-    menuIcon.addEventListener("click", function () {
+    menuIcon.addEventListener("click", () => {
         menuIcon.classList.toggle("change");
+        content.classList.toggle("modal");
         toggleMobileMenu();
     });
+
+    content.addEventListener("click", () => {
+        menuIcon.classList.remove("change");
+        content.classList.remove("modal");
+        toggleMobileMenu();
+    })
 
     function toggleMobileMenu() {
         if (menuIcon.classList.contains("change")) {
@@ -72,6 +80,7 @@ function mobileMenu() {
             root.style.setProperty("--mobile-menu-display", "none");
         }
     }
+
 }
 
 function postSearch() {

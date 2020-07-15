@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Meditations - Marcus Aurelius
+title: Meditations
+author: Marcus Aurelius
 category: notes
 permalink: /notes/meditations-notes
 ---

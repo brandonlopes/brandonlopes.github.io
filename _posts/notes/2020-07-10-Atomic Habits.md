@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Atomic Habits - James Clear
+title: Atomic Habits
+author: James Clear
 category: notes
 permalink: /notes/atomic-habits-notes
 ---

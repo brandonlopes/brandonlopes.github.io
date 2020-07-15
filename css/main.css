@@ -34,29 +34,33 @@ body{
   margin: 0px;
   padding: var(--base-padding);
   background: var(--background-color);
+  position: relative;
 }
 
 nav{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
-  margin: 0px;
-  padding-top: 0.5em;
-  width: 75%;
+  padding-top: 1em;
+  width: 830px;
   margin: auto;
   height: var(--nav-height);
-  
   -webkit-transition: .2s;
   transition: .2s;
   z-index: 1;
 }
 
 header{
-  height: var(--nav-height);
+  height: var(--nav-height) + 0.5em;
   width: 100%;
-  border-bottom: 1px solid lightgrey;
-  -webkit-transition: .2s;
-  transition: .2s;
+  background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  /* -webkit-transition: .2s; */
+  /* transition: .2s; */
 }
 
 a{
@@ -64,7 +68,7 @@ a{
   color: var(--text-color);
 }
 
-a:hover{
+a:hover, a:focus{
   cursor: pointer;
   opacity: 0.7;
 }
@@ -121,8 +125,8 @@ input[type=checkbox] {
   font-size: 32px;
   line-height: 48px;
   text-align: center;
-  /* margin: 1em 0px; */
   padding: 0em 0px 1em;
+  /* margin: 2em 0px 0px; */
   border-bottom: 1px solid lightgrey;
 }
 
@@ -175,6 +179,7 @@ input[type=checkbox] {
 .page-links{
   display: flex;
   justify-content: space-between;
+  padding-right: 4em;
   width: 30%;
 }
 
@@ -216,20 +221,20 @@ input[type=checkbox] {
 
 .wrapper{
   padding: 1em;
-  min-height: 74vh;
+  min-height: 60vh;
   width: 800px;
   max-width: 100%;
-  margin: 2em auto;
-  border: 1px solid var(--text-color);
+  margin: 5em auto 2em;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
 }
 
 .quoteOfTheDayContainer{  
   border-bottom: 1px solid lightgrey;
-  /* margin: 1.5em 0px; */
 }
 
 .next-previous{
   margin-top: 2em;
+  padding-top: 1em;
   border-top: 1px solid lightgrey;
 }
 
@@ -241,12 +246,17 @@ input[type=checkbox] {
 
 .next{
   line-height: 2px;
+  padding: 0px;
   float:right;
   text-align: right;
 }
 
-.previous a, .next a{
+.next-previous a{
   text-decoration: none;
+}
+
+.modal{
+  opacity: 0.3;
 }
 /* 
 -----------------
@@ -322,14 +332,22 @@ input[type=checkbox] {
   }
 
   nav{
-    background-color: orange;
-    border-bottom: 1px solid lightgrey;
     display: block;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
     position: fixed;
-    /* top: 0;
-    left: 0; */
+    top: 0;
+    left: 0;
     z-index: 1;
-    width: inherit;
+    width: 100%;
+  }
+
+  .site-title{
+    margin-left: 1em;
+  }
+
+  .menu-icon{
+    padding-right: 1em;
   }
 
   header{
@@ -344,6 +362,7 @@ input[type=checkbox] {
   .wrapper{
     padding: 0px;
     border: none;
+    box-shadow: none;
   }
 
   .menu-icon{
@@ -382,4 +401,5 @@ input[type=checkbox] {
   .page-links a:last-child{
     border-bottom: 1px dotted lightgrey;
   }
+
 }
