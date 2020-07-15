@@ -74,8 +74,12 @@ a:hover, a:focus{
 }
 
 hr{
-  border: 1px solid lightgray;
+  border: none;
+  border-top: 1px solid lightgray;
   opacity: 0.7;
+  height: 1px;
+  /* width: 50%; */
+  margin: 1em auto;
 }
 
 blockquote{
@@ -226,6 +230,8 @@ input[type=checkbox] {
   max-width: 100%;
   margin: 5em auto 2em;
   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .quoteOfTheDayContainer{  
