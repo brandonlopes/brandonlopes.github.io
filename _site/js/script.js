@@ -20,8 +20,7 @@ function themeSelector() {
             currentTheme = localStorage.getItem("currentTheme");
             changeTheme(JSON.parse(currentTheme));
         } else {
-            
-            saveTheme(darkMode);
+            saveTheme(lightMode);
         }
     }
 

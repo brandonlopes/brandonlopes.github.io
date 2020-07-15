@@ -1,7 +1,7 @@
 {% for post in site.categories.blog limit:1 %}
   <div>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    <h2 class="post-link">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 

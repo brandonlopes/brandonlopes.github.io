@@ -1,0 +1,34 @@
+    <div class="next-previous">
+    {% if page.previous %}
+    {% assign previous = page.previous %}
+    {% else %}
+    {% assign previous = site.posts[0] %}
+    {% endif %}
+    <div class="previous">
+      <a  href="{{site.baseurl}}{{previous.url}}" title="Previous Post: {{previous.title}}">
+        <div>
+          <h5>  &xlarr; Previous </h5>
+          <h4> {{previous.title}} </h4>
+        </div>
+      </a>
+    </div>
+
+    {% if page.next %}
+    {% assign next = page.next %}
+    {% else %}
+    {%comment%}
+    As the array index start at zero we substract 1 to the total count,
+    we then get the last post index in the site.posts array
+    {%endcomment%}
+    <!-- {% assign last lastPostIndex = site.posts | size | minus: 1 %} -->
+    <!-- {% assign next = site.posts[lastPostIndex] %} -->
+    {% endif %}
+    <div class="next">
+      <a href="{{site.baseurl}}{{next.url}}" title="next Post: {{next.title}}">
+        <div>
+          <h5> Next &xrarr;</h5>
+          <h4> {{next.title}}</h4>
+        </div>
+      </a>
+    </div>
+</div>
