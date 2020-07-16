@@ -102,6 +102,7 @@ footer{
   text-align: center;
   margin: auto;
   border-top: 1px solid lightgrey;
+  background-color: var(--background-color);
 }
 
 footer p, footer a{
@@ -229,13 +230,11 @@ input[type=checkbox] {
   max-width: 100%;
   margin: 5em auto 2em;
   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
-}
-
-.wrapper a{
-  text-decoration: underline;
+  background-color: var(--background-color);
 }
 
 .quoteOfTheDayContainer{  
+  text-align: center;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -265,6 +264,18 @@ input[type=checkbox] {
 .modal{
   opacity: 0.1;
 }
+
+/* .background{
+  position: fixed;
+  z-index: -2;
+  height: 120vh;
+  width: 100vw;
+  transform: skewY(35deg);
+  border-radius: 50em;
+  border: 1px solid var(--text-color) ;
+  background-color: var(--background-color);
+} */
+
 /* 
 -----------------
 3. ID Styles
@@ -280,7 +291,15 @@ input[type=checkbox] {
   margin-top: 0.5em;
   margin-right: 1em;
   margin-bottom: 1em;
-  text-align: right;
+  text-align: center;
+}
+
+#project-list li{
+  text-transform: capitalize;
+  padding: 0px;
+  /* background-color: orange; */
+  line-height: 9px;
+  margin-bottom: 2em;
 }
 
 /* 
@@ -367,7 +386,7 @@ input[type=checkbox] {
   }
 
   .wrapper{
-    min-height: 50vh;
+    min-height: 64vh;
     padding: 0px;
     margin-bottom: 0px;
     border: none;
@@ -409,6 +428,10 @@ input[type=checkbox] {
 
   .page-links a:last-child{
     border-bottom: 1px dotted lightgrey;
+  }
+
+  .background{
+    display: none;
   }
 
 }

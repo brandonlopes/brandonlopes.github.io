@@ -1,4 +1,4 @@
-document.body.onload = themeSelector().loadTheme(), mobileMenu(), quoteOfTheDay();
+document.body.onload = () => { themeSelector().loadTheme(), mobileMenu(), quoteOfTheDay(), fetchGithubLinks(); }
 
 function themeSelector() {
     let lightSwitch = document.getElementById("light-switch");
@@ -95,10 +95,12 @@ function postSearch() {
 }
 
 function quoteOfTheDay() {
-    let date = new Date();
+    if (document.getElementById("quoteOfTheDay") || document.getElementById("quoteAuthor")) {
+        let quoteText = document.getElementById("quoteOfTheDay");
+        let quoteAuthor = document.getElementById("quoteAuthor");
+        let date = new Date();
 
-    let quotesList = {
-        quotes: [
+        let quoteList = [
             {
                 text: "Less is more. It's also less. That's the point.",
                 author: "Greg McKeown"
@@ -128,13 +130,41 @@ function quoteOfTheDay() {
                 author: "Lao Tzu"
             }
         ]
+
+
+        let today = date.getDay();
+        let quoteOfTheDay = quoteList[today];
+
+        quoteText.innerText = `“${quoteOfTheDay.text}”`;
+        quoteAuthor.innerText = `- ${quoteOfTheDay.author}`
     }
-
-    let today = date.getDay();
-    let quoteOfTheDay = quotesList.quotes[today];
-
-    let quoteText = document.getElementById("quoteOfTheDay");
-    let quoteAuthor = document.getElementById("quoteAuthor");
-    quoteText.innerText = `“${quoteOfTheDay.text}”`;
-    quoteAuthor.innerText = `- ${quoteOfTheDay.author}`
 }
+
+function fetchGithubLinks() {
+    if (document.getElementById("project-list")) {
+        let repoList = document.getElementById("project-list");
+        fetch(`https://api.github.com/users/brandonlopes/repos`)
+            .then(function (response) {
+                response.json().then(function (data) {
+                    for (repository in data) {
+                        if (data[repository].has_pages && data[repository].name != "brandonlopes.github.io") {
+                            let link = data[repository].name;
+                            let name = prettyName(data[repository].name);
+                            let description = data[repository].description === null ? "No description" : data[repository].description;
+                            repoList.innerHTML += `<li>
+                            <h3>
+                            <a href="https://brandonlopes.ca/${link}">${name}</a> 
+                            </h3>
+                            <p>${description}</p>
+                            </li>`;
+                        };
+                    };
+                });
+            });
+    };
+
+    function prettyName(repo) {
+        let name = repo.replace(/_/g, " ");
+        return name;
+    }
+};
