@@ -265,16 +265,17 @@ input[type=checkbox] {
   opacity: 0.1;
 }
 
-/* .background{
+.background{
   position: fixed;
   z-index: -2;
-  height: 120vh;
-  width: 100vw;
-  transform: skewY(35deg);
-  border-radius: 50em;
+  height: 100%;
+  width: 100%;
+  /* transform: skewY(35deg);
+  border-radius: 50em; */
   border: 1px solid var(--text-color) ;
-  background-color: var(--background-color);
-} */
+  background-color: lightgrey;
+  opacity: 0.1;
+}
 
 /* 
 -----------------
