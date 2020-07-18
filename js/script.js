@@ -1,24 +1,26 @@
-document.body.onload = () => { themeSelector().loadTheme(), mobileMenu(), quoteOfTheDay(), fetchGithubLinks(); }
+document.body.onload = () => { themeSelector().loadTheme(); mobileMenu(); quoteOfTheDay(); fetchGithubLinks(); }
 
 function themeSelector() {
-    let lightSwitch = document.getElementById("light-switch");
+    let colorToggle = document.getElementById("color-toggle");
     let root = document.documentElement;
     let currentTheme = "";
 
     let darkMode = {
         backgroundColor: "#24292e",
         textColor: "white",
+        icon: "../assets/images/sun.svg"
     }
 
     let lightMode = {
         backgroundColor: "white",
         textColor: "#24292e",
+        icon: "../assets/images/moon.svg"
     }
 
     function loadTheme() {
         if (localStorage.getItem("currentTheme")) {
-            currentTheme = localStorage.getItem("currentTheme");
-            changeTheme(JSON.parse(currentTheme));
+            currentTheme = JSON.parse(localStorage.getItem("currentTheme"));
+            changeTheme(currentTheme);
         } else {
             saveTheme(lightMode);
         }
@@ -31,13 +33,17 @@ function themeSelector() {
     function changeTheme(theme) {
         root.style.setProperty('--background-color', theme.backgroundColor);
         root.style.setProperty('--text-color', theme.textColor);
-        if (theme.backgroundColor === darkMode.backgroundColor) {
-            lightSwitch.checked = true;
+        
+        if (theme.backgroundColor === darkMode.backgroundColor){
+            colorToggle.src = darkMode.icon;
         }
+        else { colorToggle.src = lightMode.icon; }
     }
 
-    lightSwitch.addEventListener("click", function () {
-        if (lightSwitch.checked) {
+    colorToggle.addEventListener("click", () => {
+        currentTheme = JSON.parse(localStorage.getItem("currentTheme"));
+        animateIcon();
+        if (currentTheme.backgroundColor === lightMode.backgroundColor) {
             changeTheme(darkMode);
             saveTheme(darkMode);
         }
@@ -45,7 +51,14 @@ function themeSelector() {
             changeTheme(lightMode);
             saveTheme(lightMode);
         }
-    })
+    });
+
+    function animateIcon(){
+        colorToggle.classList.toggle("spin");
+        setTimeout(() => {
+            colorToggle.classList.toggle("spin");
+        }, 30)
+    }
 
     return {
         loadTheme: loadTheme

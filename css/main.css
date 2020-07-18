@@ -35,6 +35,7 @@ body{
   padding: var(--base-padding);
   background: var(--background-color);
   position: relative;
+  /* min-height: 100vh; */
 }
 
 nav{
@@ -45,9 +46,16 @@ nav{
   width: 830px;
   margin: auto;
   height: var(--nav-height);
-  -webkit-transition: .2s;
-  transition: .2s;
+  /* -webkit-transition: .2s;
+  transition: .2s; */
   z-index: 1;
+}
+
+nav img{
+  width: 1.5em;
+  height: 1.5em;
+  opacity: 0.9;
+  transition: 0.5s;
 }
 
 header{
@@ -68,7 +76,7 @@ a{
   color: var(--text-color);
 }
 
-a:hover, a:focus{
+a:hover, a:focus, nav img:hover{
   cursor: pointer;
   opacity: 0.7;
 }
@@ -100,7 +108,7 @@ footer{
   width: 100%;
   height: 7em;
   text-align: center;
-  margin: auto;
+  margin: 1em auto 0px;
   border-top: 1px solid lightgrey;
   background-color: var(--background-color);
 }
@@ -213,8 +221,8 @@ input[type=checkbox] {
   bottom: 4px;
   background-color: var(--background-color);
   border-radius: 50%;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .01s;
+  transition: .01s;
 }
 
 .light-switch input:checked + .slider:before{
@@ -225,7 +233,7 @@ input[type=checkbox] {
 
 .wrapper{
   padding: 1em;
-  min-height: 60vh;
+  min-height: 64vh;
   width: 800px;
   max-width: 100%;
   margin: 5em auto 2em;
@@ -268,12 +276,11 @@ input[type=checkbox] {
 .background{
   position: fixed;
   z-index: -2;
-  height: 100%;
+  height: 110vh;
   width: 100%;
   /* transform: skewY(35deg);
   border-radius: 50em; */
-  border: 1px solid var(--text-color) ;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   opacity: 0.1;
 }
 
@@ -346,6 +353,11 @@ input[type=checkbox] {
   to {opacity: 1;}
 } 
 
+.spin{
+  transform: rotate(360deg);
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
 /* 
 -----------------
 5. Media Queries
@@ -367,6 +379,12 @@ input[type=checkbox] {
     left: 0;
     z-index: 1;
     width: 100%;
+    transition: .3s;
+  }
+
+  nav img{
+    margin: 1.5em 1em 0px 0px;
+    float: right;
   }
 
   .site-title{
@@ -383,7 +401,7 @@ input[type=checkbox] {
 
   footer{
     margin-top: 0.5em;
-    height: 6em;
+    /* height: 6em; */
   }
 
   .wrapper{
@@ -398,7 +416,7 @@ input[type=checkbox] {
     float: right;
   }
 
-  nav .page-links, nav .light-switch {
+  nav .page-links, nav .light-switch, nav img {
     display: var(--mobile-menu-display);
     animation-name: fadeIn;
     animation-duration: 0.2s;
@@ -407,8 +425,8 @@ input[type=checkbox] {
   .light-switch{
     margin: 1.5em 1em 0px 0px;
     float: right;
-    -webkit-transition: .4s;
-    transition: .4s;
+    /* -webkit-transition: .4s;
+    transition: .4s; */
   }
 
   .page-links{
