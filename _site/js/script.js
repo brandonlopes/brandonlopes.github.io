@@ -70,18 +70,19 @@ function mobileMenu() {
     let content = document.getElementById("wrapper");
     let footer = document.getElementById("footer");
     let root = document.documentElement;
+    let modal = document.getElementById("modal");
+    modal.addEventListener("click", () => {
+        menuIcon.classList.toggle("change");
+        toggleMobileMenu();
+    })
 
     menuIcon.addEventListener("click", () => {
         menuIcon.classList.toggle("change");
-        content.classList.toggle("modal");
-        footer.classList.toggle("modal");
         toggleMobileMenu();
     });
 
     content.addEventListener("click", () => {
         menuIcon.classList.remove("change");
-        content.classList.remove("modal");
-        footer.classList.remove("modal");
         toggleMobileMenu();
     })
 
