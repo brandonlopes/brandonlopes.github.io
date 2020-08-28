@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Aug 2020 09:43:20 -0400</pubDate>
-    <lastBuildDate>Wed, 12 Aug 2020 09:43:20 -0400</lastBuildDate>
+    <pubDate>Fri, 28 Aug 2020 11:31:08 -0400</pubDate>
+    <lastBuildDate>Fri, 28 Aug 2020 11:31:08 -0400</lastBuildDate>
     <generator>Jekyll v4.1.0</generator>
     
       <item>
@@ -37,7 +37,7 @@
 &lt;ul&gt;
   &lt;li&gt;Habits are learned solutions to problems
     &lt;ul&gt;
-      &lt;li&gt;Your shitty Netflix/Gaming habit is the learned solution to your problem of stress or boredom, find a new one&lt;/li&gt;
+      &lt;li&gt;Your Netflix/Gaming habit is the learned solution to your problem of stress or boredom, find a new one&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Just get your reps in. Repetition is how patterns are formed&lt;/li&gt;
@@ -173,39 +173,45 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
       </item>
     
       <item>
-        <title>Book List</title>
+        <title>Reading List</title>
         <description>&lt;p&gt;A list of my favorite and most recommended books
 &lt;!--more--&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;meditations-by-marcus-aurelius&quot;&gt;&lt;a href=&quot;/notes/meditations-notes&quot;&gt;Meditations by Marcus Aurelius&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;The nearly two-thousand year-old private journal of the Roman Emperor Marcus Aurelius, Meditations contains practical wisdom and stoic teachings that stand the test of time and continues to be a relevant member of home libraries to this day.&lt;/p&gt;
-
-&lt;h3 id=&quot;atomic-habits-by-james-clear&quot;&gt;&lt;a href=&quot;/notes/atomic-habits-notes&quot;&gt;Atomic Habits by James Clear&lt;/a&gt;&lt;/h3&gt;
-
-&lt;!-- ### The Meditations of Marcus Aurelius Antoninus
-![Meditations](/assets/images/meditations.jpg)
-
-I am not a religious person, but if I had a bible, this would be it. This is the book that ignited a love of philosophy, reading, and being the best man I can be for myself and the people around me.
+&lt;!-- ### [Meditations by Marcus Aurelius](/notes/meditations-notes)
 
 The nearly two-thousand year-old private journal of the Roman Emperor Marcus Aurelius, Meditations contains practical wisdom and stoic teachings that stand the test of time and continues to be a relevant member of home libraries to this day.
 
-If you haven't read this book yet, I implore you to. You won't regret it.
+### [Atomic Habits by James Clear](/notes/atomic-habits-notes) --&gt;
 
----
+&lt;h3 id=&quot;tao-te-ching-by-lao-tzu&quot;&gt;Tao Te Ching by Lao Tzu&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/tao-te-ching.jpg&quot; alt=&quot;Tao Cover&quot; /&gt;&lt;/p&gt;
 
-### Atomic Habits
-![Atomic Habits](/assets/images/atomic-habits.jpg)
+&lt;h3 id=&quot;mans-search-for-meaning-by-victor-frankl&quot;&gt;Man’s Search for Meaning by Victor Frankl&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/mans-search-for-meaning.jpg&quot; alt=&quot;Man's Search For Meaning&quot; /&gt;&lt;/p&gt;
 
-I love this book. It is astounding and I have read and listened to it dozens of times.
+&lt;h3 id=&quot;the-meditations-of-marcus-aurelius&quot;&gt;The Meditations of Marcus Aurelius&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/meditations.jpg&quot; alt=&quot;Meditations&quot; /&gt;&lt;/p&gt;
 
-James Clear drives home the point that small, consistent efforts and enjoying the process are what allow you to reach your goals and do great things. If you're interested at all in how habits work and how to build/break them, give this book a go.
+&lt;p&gt;I am not a religious person, but if I had a bible, this would be it. This is the book that ignited a love of philosophy, reading, and being the best man I can be for myself and the people around me.&lt;/p&gt;
 
-Atomic Habits is the reason I started going to the library every day to work on this website, and I couldn't be more grateful. --&gt;
+&lt;p&gt;The nearly two-thousand year-old private journal of the Roman Emperor Marcus Aurelius, Meditations contains practical wisdom and stoic teachings that stand the test of time and continues to be a relevant member of home libraries to this day.&lt;/p&gt;
+
+&lt;p&gt;If you haven’t read this book yet, I implore you to. You won’t regret it.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;atomic-habits&quot;&gt;Atomic Habits&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/atomic-habits.jpg&quot; alt=&quot;Atomic Habits&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I love this book. It is astounding and I have read and listened to it dozens of times.&lt;/p&gt;
+
+&lt;p&gt;James Clear drives home the point that small, consistent efforts and enjoying the process are what allow you to reach your goals and do great things. If you’re interested at all in how habits work and how to build/break them, give this book a go.&lt;/p&gt;
+
+&lt;p&gt;Atomic Habits is the reason I started going to the library every day to work on this website, and I couldn’t be more grateful.&lt;/p&gt;
 </description>
         <pubDate>Tue, 14 Jan 2020 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/blog/book-list</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/book-list</guid>
+        <link>http://localhost:4000/blog/reading-list</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/reading-list</guid>
         
         
         <category>blog</category>

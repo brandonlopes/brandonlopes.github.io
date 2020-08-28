@@ -21,7 +21,7 @@ permalink: /notes/atomic-habits-notes
 ---
 
 - Habits are learned solutions to problems
-  - Your shitty Netflix/Gaming habit is the learned solution to your problem of stress or boredom, find a new one
+  - Your Netflix/Gaming habit is the learned solution to your problem of stress or boredom, find a new one
 - Just get your reps in. Repetition is how patterns are formed
 - Active practice > passive learning
 - Best way to practice is to make it easy and eventually automatic

@@ -111,6 +111,7 @@ footer{
   margin: 1em auto 0px;
   border-top: 1px solid lightgrey;
   background-color: var(--background-color);
+  
 }
 
 footer p, footer a{
@@ -137,7 +138,7 @@ input[type=checkbox] {
   font-size: 32px;
   line-height: 48px;
   text-align: center;
-  padding: 0em 0px 1em;
+  padding-bottom: 1em;
   /* margin: 2em 0px 0px; */
   border-bottom: 1px solid lightgrey;
 }
@@ -233,10 +234,10 @@ input[type=checkbox] {
 
 .wrapper{
   padding: 1em;
-  min-height: 64vh;
+  min-height: 71vh;
   width: 800px;
   max-width: 100%;
-  margin: 5em auto 2em;
+  margin: 4em auto 2em;
   /* box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5); */
   background-color: var(--background-color);
 }
@@ -261,7 +262,7 @@ input[type=checkbox] {
 }
 
 .next{
-  max-width: 50%;
+  max-width: 45%;
   /* line-height: 1px; */
   padding-right: 0.5em;
   float:right;
@@ -279,6 +280,12 @@ margin-top: 0px;
 
 .next-previous a{
   text-decoration: none;
+}
+
+.profile-pic{
+  display: block;
+  margin: auto;
+  border-radius: 100px;
 }
 
 #modal{
@@ -324,7 +331,6 @@ margin-top: 0px;
 #project-list li{
   text-transform: capitalize;
   padding: 0px;
-  /* background-color: orange; */
   /* line-height: 9px; */
   margin-bottom: 2em;
 }

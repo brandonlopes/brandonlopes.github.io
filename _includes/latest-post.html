@@ -5,7 +5,7 @@
     </h2>
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    <p>{{ post.content | strip_html | truncatewords: 16 }} <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+    <p>{{ post.content | strip_html | truncatewords: 9 }} <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
     </p>
   </div>
   {% endfor %}
