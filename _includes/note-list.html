@@ -1,9 +1,0 @@
-<ul class="post-list">
-    {% for note in site.categories.notes %}
-      <li>
-        <h3>
-          <a href="{{ note.url | prepend: site.baseurl }}">{{ note.title }}</a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
