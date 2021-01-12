@@ -7,6 +7,16 @@
   <meta name="description"
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+    <meta name="og:description" content="{{ page.description }}" />
+
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="twitter:title" content="{{ page.title }}" />
+
+    <meta name="twitter:description" content="{{ page.description }}" />
+
+    <meta name="next-head-count" content="10" />
+
   <script defer src="/js/script.js"></script>
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Atomic Habits - James Clear
+title: Atomic Habits
+author: James Clear
 category: notes
 permalink: /notes/atomic-habits-notes
 ---
@@ -20,7 +21,7 @@ permalink: /notes/atomic-habits-notes
 ---
 
 - Habits are learned solutions to problems
-  - Your shitty Netflix/Gaming habit is the learned solution to your problem of stress or boredom, find a new one
+  - Your Netflix/Gaming habit is the learned solution to your problem of stress or boredom, find a new one
 - Just get your reps in. Repetition is how patterns are formed
 - Active practice > passive learning
 - Best way to practice is to make it easy and eventually automatic
@@ -42,10 +43,9 @@ permalink: /notes/atomic-habits-notes
 
 
 - "Work hard on the things that come easy. Doing the thing when it's boring or painful is the difference between success and failure, between a professional and an amateur." Do the thing every day. Through the ups and downs. Consistency is key
-  - Find your niche and exploit it. The things that you're probably better at than the average person. Combine them to make that funny comic combo of being funnier than the average person, plus being a decent artist
-  - You're a decent writer and coder, do something with them
+  - Find your niche and exploit it. The things that you're probably better at than the average person. Combine them to make the next Dilbert comic; a combination of being funnier than the average person, and being a decent artist
 
-- There's going to be a lot of workouts, coding, and reading that you won't want to do, but you have never regretted doing them. Don't let life get in the way of your goals and habits. Do them and show up every day
+- There's going to be a lot of workouts or other hard activities that you won't want to do, but you have never regretted doing them. Don't let life get in the way of your goals and habits. Do them and show up every day
 
 - Keep your identity small, clinging too tightly to one aspect of your personality/identity will only result in disaster.
   - Instead of being a vegan, you are someone that cares about the things you do and the food you eat and the impact it has on yourself and others

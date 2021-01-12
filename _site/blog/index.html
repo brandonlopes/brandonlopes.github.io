@@ -8,8 +8,17 @@
 
   <title>Blog | Brandon Lopes</title>
   <meta name="description"
-    content="Technology, philosophy, and the little things
-">
+    content="                            Reading List                Jan 14, 2020            ">
+
+    <meta name="og:description" content="" />
+
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="twitter:title" content="Blog" />
+
+    <meta name="twitter:description" content="" />
+
+    <meta name="next-head-count" content="10" />
 
   <script defer src="/js/script.js"></script>
   <link rel="stylesheet" href="/css/main.css">
@@ -20,10 +29,9 @@
 </head>
 
 <body>
-
   <header>
   <nav>
-    <a href="/">Brandon Lopes</a>
+    <a class="site-title" href="/">Brandon Lopes</a>
 
     <div class="menu-icon" id="menu-icon">
       <div class="bar1"></div>
@@ -43,6 +51,8 @@
       
       
       
+      
+      
       <a class="page-link" href="/notes/">Notes</a>
       
       
@@ -51,35 +61,34 @@
       
       
     </div>
+
+    <img id="color-toggle" src="/assets/images/moon.svg"></img>
+    <!-- <span>&#9790 &#9728</span> -->
+
   
-    <label class="light-switch">
+    <!-- <label class="light-switch">
       <input type="checkbox" id="light-switch">
       <span class="slider"></span>
-    </label>
+    </label> -->
     
   </nav>
 </header>
 
-    <div class="wrapper">
-      <article class="post">
+    <div id="modal"></div>
 
-  <header class="post-header">
+    <div id="wrapper">
+      <article class="post wrapper">
+
+  <div class="post-header">
     <h1 class="post-title">Blog</h1>
-  </header>
+  </div>
 
   <div>
     <ul class="post-list">
     
       <li>
-        <h3>
-          <a class="post-link" href="/blog/book-list">Book List</a>
-        </h3>
-        <span class="post-meta">Jan 15, 2020</span>
-      </li>
-    
-      <li>
-        <h3>
-          <a class="post-link" href="/blog/book-list">Book List</a>
+        <h3 class="post-link">
+          <a href="/blog/reading-list">Reading List</a>
         </h3>
         <span class="post-meta">Jan 14, 2020</span>
       </li>
@@ -92,7 +101,7 @@
 
     </div>
 
-  <footer>
+    <footer id="footer">
   <p>Made with ❤️ using <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://pages.github.com/" target="_blank">Github Pages</a></p>
 </footer>
 

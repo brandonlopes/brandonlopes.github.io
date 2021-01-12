@@ -1,27 +1,28 @@
-document.body.onload = themeSelector().loadTheme(), mobileMenu(), quoteOfTheDay();
+document.body.onload = () => { themeSelector().loadTheme(); mobileMenu(); quoteOfTheDay(); fetchGithubLinks(); }
 
 function themeSelector() {
-    let lightSwitch = document.getElementById("light-switch");
+    let colorToggle = document.getElementById("color-toggle");
     let root = document.documentElement;
     let currentTheme = "";
 
     let darkMode = {
         backgroundColor: "#24292e",
         textColor: "white",
+        icon: "../assets/images/sun.svg"
     }
 
     let lightMode = {
         backgroundColor: "white",
         textColor: "#24292e",
+        icon: "../assets/images/moon.svg"
     }
 
     function loadTheme() {
         if (localStorage.getItem("currentTheme")) {
-            currentTheme = localStorage.getItem("currentTheme");
-            changeTheme(JSON.parse(currentTheme));
+            currentTheme = JSON.parse(localStorage.getItem("currentTheme"));
+            changeTheme(currentTheme);
         } else {
-            
-            saveTheme(darkMode);
+            saveTheme(lightMode);
         }
     }
 
@@ -32,13 +33,17 @@ function themeSelector() {
     function changeTheme(theme) {
         root.style.setProperty('--background-color', theme.backgroundColor);
         root.style.setProperty('--text-color', theme.textColor);
-        if (theme.backgroundColor === darkMode.backgroundColor) {
-            lightSwitch.checked = true;
+        
+        if (theme.backgroundColor === darkMode.backgroundColor){
+            colorToggle.src = darkMode.icon;
         }
+        else { colorToggle.src = lightMode.icon; }
     }
 
-    lightSwitch.addEventListener("click", function () {
-        if (lightSwitch.checked) {
+    colorToggle.addEventListener("click", () => {
+        currentTheme = JSON.parse(localStorage.getItem("currentTheme"));
+        animateIcon();
+        if (currentTheme.backgroundColor === lightMode.backgroundColor) {
             changeTheme(darkMode);
             saveTheme(darkMode);
         }
@@ -46,21 +51,41 @@ function themeSelector() {
             changeTheme(lightMode);
             saveTheme(lightMode);
         }
-    })
+    });
+
+    function animateIcon(){
+        colorToggle.classList.toggle("spin");
+        setTimeout(() => {
+            colorToggle.classList.toggle("spin");
+        }, 30)
+    }
 
     return {
-        loadTheme: loadTheme
+        loadTheme: loadTheme,
+        changeTheme: changeTheme
     };
 }
 
 function mobileMenu() {
     let menuIcon = document.getElementById("menu-icon");
+    let content = document.getElementById("wrapper");
+    let footer = document.getElementById("footer");
     let root = document.documentElement;
+    let modal = document.getElementById("modal");
+    modal.addEventListener("click", () => {
+        menuIcon.classList.toggle("change");
+        toggleMobileMenu();
+    })
 
-    menuIcon.addEventListener("click", function () {
+    menuIcon.addEventListener("click", () => {
         menuIcon.classList.toggle("change");
         toggleMobileMenu();
     });
+
+    content.addEventListener("click", () => {
+        menuIcon.classList.remove("change");
+        toggleMobileMenu();
+    })
 
     function toggleMobileMenu() {
         if (menuIcon.classList.contains("change")) {
@@ -73,6 +98,7 @@ function mobileMenu() {
             root.style.setProperty("--mobile-menu-display", "none");
         }
     }
+
 }
 
 function postSearch() {
@@ -84,10 +110,12 @@ function postSearch() {
 }
 
 function quoteOfTheDay() {
-    let date = new Date();
+    if (document.getElementById("quoteOfTheDay") || document.getElementById("quoteAuthor")) {
+        let quoteText = document.getElementById("quoteOfTheDay");
+        let quoteAuthor = document.getElementById("quoteAuthor");
+        let date = new Date();
 
-    let quotesList = {
-        quotes: [
+        let quoteList = [
             {
                 text: "Less is more. It's also less. That's the point.",
                 author: "Greg McKeown"
@@ -117,13 +145,41 @@ function quoteOfTheDay() {
                 author: "Lao Tzu"
             }
         ]
+
+
+        let today = date.getDay();
+        let quoteOfTheDay = quoteList[today];
+
+        quoteText.innerText = `“${quoteOfTheDay.text}”`;
+        quoteAuthor.innerText = `- ${quoteOfTheDay.author}`
     }
-
-    let today = date.getDay();
-    let quoteOfTheDay = quotesList.quotes[today];
-
-    let quoteText = document.getElementById("quoteOfTheDay");
-    let quoteAuthor = document.getElementById("quoteAuthor");
-    quoteText.innerText = `“${quoteOfTheDay.text}”`;
-    quoteAuthor.innerText = `- ${quoteOfTheDay.author}`
 }
+
+function fetchGithubLinks() {
+    if (document.getElementById("project-list")) {
+        let repoList = document.getElementById("project-list");
+        fetch(`https://api.github.com/users/brandonlopes/repos`)
+            .then(function (response) {
+                response.json().then(function (data) {
+                    for (repository in data) {
+                        if (data[repository].has_pages && data[repository].name != "brandonlopes.github.io") {
+                            let link = data[repository].name;
+                            let name = prettyName(data[repository].name);
+                            let description = data[repository].description === null ? "No description" : data[repository].description;
+                            repoList.innerHTML += `<li>
+                            <h3>
+                            <a href="https://brandonlopes.ca/${link}">${name}</a> 
+                            </h3>
+                            <p>${description}</p>
+                            </li>`;
+                        };
+                    };
+                });
+            });
+    };
+
+    function prettyName(repo) {
+        let name = repo.replace(/_/g, " ");
+        return name;
+    }
+};

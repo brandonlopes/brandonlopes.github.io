@@ -1,6 +1,9 @@
 ---
-layout: default
+layout: page
 title: Projects
 permalink: /projects/
 ---
-This is where worthy projects will be showcased in all of their glory 
+
+Front End Web projects you can visit and interact with!
+
+{% include project-list.html %}

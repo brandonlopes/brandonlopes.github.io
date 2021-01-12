@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <div class="menu-icon" id="menu-icon">
       <div class="bar1"></div>
@@ -16,11 +16,15 @@
       {% endif %}
       {% endfor %}
     </div>
+
+    <img id="color-toggle" src="/assets/images/moon.svg"></img>
+    <!-- <span>&#9790 &#9728</span> -->
+
   
-    <label class="light-switch">
+    <!-- <label class="light-switch">
       <input type="checkbox" id="light-switch">
       <span class="slider"></span>
-    </label>
+    </label> -->
     
   </nav>
 </header>
